@@ -1,0 +1,52 @@
+/* ========================================== */
+/* === IMPORTANDO LOS ARCHIVOS NECESARIOS === */
+/* ========================================== */
+@import url('./tipografias.css');
+
+
+/* ============================================ */
+/* === DECLARANDO LAS VARIABLES PERTINENTES === */
+/* ============================================ */
+:root {
+    /* Variables globales */
+    --color_principal: rgba(30, 69, 177, 1.0);
+    --color_secundario: rgba(234, 237, 237, 1.0);
+    --color_terciario : rgba(147, 197, 253, 1.0);
+    --bg_color: rgba(234, 234, 234, 1.0);
+    --color_blanco: rgba(255, 255, 255, 1.0);
+    --color_textColor: rgba(23, 32, 42, 1.0);
+    --color_negro1: rgba(0, 0, 0, 1.0);
+    --color_negro2: rgba(24, 31, 46, 1.0);
+    --color_negro_iconos: rgba(28, 39, 76, 1.0);
+    --ff_titulo: 'Nocturne', 'Thinoo', 'Thinoo_bold', 'Rota', 'Rota_600', 'Actay', 'Actay_600', 'Patrick Hand', 'Nunito', 'Open Sans', Arial, Helvetica, sans-serif, serif;
+    --ff_subtituloN: 'Thinoo', 'Thinoo_bold', 'Nocturne', 'Nunito', 'Open Sans', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_subtituloB: 'Thinoo_bold', 'Thinoo', 'Nunito', 'Open Sans', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_estandar: 'Rota', 'Actay', 'Thinoo', 'Open Sans', 'Nunito', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_estandarI: 'RotaI', 'ActayI', 'Open Sans', 'Nunito', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_estandar1: 'Rota_100';
+    --ff_estandar1I: 'Rota_I100';
+    --ff_estandar2: 'Rota_200';
+    --ff_estandar2I: 'Rota_I200';
+    --ff_estandar3: 'Rota_300', 'Actay_300', 'Open Sans', 'Nunito', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_estandar3I: 'Rota_I300', 'Actay_I300', 'Open Sans', 'Nunito', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_estandar5: 'Rota_500';
+    --ff_estandar5I: 'Rota_I500';
+    --ff_estandar6: 'Rota_600', 'Actay_600', 'Open Sans', 'Nunito', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_estandar6I: 'Rota_I600', 'Rota_I600', 'Open Sans', 'Nunito', 'Patrick Hand', Arial, Helvetica, sans-serif, serif;
+    --ff_estandar7: 'Rota_700';
+    --ff_estandar7I: 'Rota_I700';
+    --ff_estandar8: 'Rota_800';
+    --ff_estandar8I: 'Rota_I800';
+    --ff_estandar9: 'Rota_900';
+    --ff_estandar9I: 'Rota_I900';
+    --fs_text: 16px;
+    --sz_letraPequenya: 12px;
+    --sz_letraMediana: 14px;
+    --sz_letraSemigrande: 18px;
+    --sz_letraGrande: 20px;
+    --sz_letraSubtitulo: 26px;
+    --sz_letraTitulo: 36px;
+    --br_estandar: 1rem;
+    --br_circulo: 50%;
+    --shadow: 0px 3px 10px -4px #000;
+}

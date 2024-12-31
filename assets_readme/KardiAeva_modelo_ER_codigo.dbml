@@ -1,0 +1,256 @@
+// Definición de ENUMs
+enum eleccion.genero {
+  "M"
+  "F"
+}
+
+enum residencia {
+  "Laboral"
+  "Residencial"
+  "Rural"
+}
+
+enum estado.cita_medica {
+  "Aplazada"
+  "Cancelada"
+  "Completada"
+  "Pendiente"
+}
+
+enum tipo.relevancia {
+  "Alta"
+  "Media"
+  "Baja"
+}
+
+enum tipo.etapa {
+  "Asintomático"
+  "Inicial"
+  "En desarrollo"
+  "Avanzada"
+  "Terminal"
+}
+
+
+// Definición de tablas
+Table nombre_completo {
+  id integer [primary key, unique, increment]
+  primer_nombre varchar(30) [not null]
+  segundo_nombre varchar(30)
+  primer_apellido varchar(30) [not null]
+  segundo_apellido varchar(30)
+}
+
+Table tipo_enfermedad {
+  id integer [primary key, unique, increment]
+  nombre varchar(40) [not null]
+  descripcion varchar(255) [note: "La descripción la daría la IA, pero puede quedar vacío."]
+}
+
+Table sintomas_enfermedad {
+  id_enfermedad integer [ref: > enfermedad.id, unique]
+  id_sintomas integer [ref: > sintomas.id, unique]
+  relevancia tipo.relevancia [not null]
+  etapa tipo.etapa [not null]
+  descripcion text [note: "El usuario es el encargado de decidir escribir algo ahí o no"]
+
+}
+
+Table sintomas {
+  id integer [primary key, unique, increment]
+  nombre varchar(50) [not null]
+  descripcion varchar(255) [note: "La descripción la daría la IA, pero puede quedar vacío."]
+}
+
+Table enfermedad {
+  id integer [primary key, unique, increment]
+  nombre varchar(255) [not null]
+  descripcion text(700) [note: "Esta descripción lo tomará la IA y la escribirá ahí en un texto de no más de 700 caracteres"]
+  fecha_diagnostico date [not null]
+  es_enfermedad_principal tinyint(1) [not null]
+  id_tipo_enfermedad integer [ref: > tipo_enfermedad.id, unique]
+}
+
+Table tipo_dosis {
+  id integer [primary key, unique, increment]
+  nombre varchar(20) [not null]
+  descripcion varchar(255) [note: "La descripción la daría la IA, pero puede quedar vacío."]
+}
+
+Table componentes_medicamento {
+  id integer [primary key, unique, increment]
+  componentes json [not null, note: "Hacer uso de archivos JSON para guardar toda la lista de componentes con su cantidad. Las llaves serían: -nombre_componente -cantidad -tipo_medicion (mg, mcg, etc)"]
+}
+
+Table tipo_medicamento {
+  id integer [primary key, unique, increment]
+  nombre varchar(75) [not null]
+  descripcion varchar(255) [note: "La descripción la daría la IA, pero puede quedar vacío."]
+}
+
+Table medicamentos {
+  id integer [primary key, unique, increment]
+  nombre varchar(255) [not null]
+  dosis_recetadas smallint(5) [not null]
+  dosis_totales smallint(5) [note: "Este valor puede ser obtenido por la IA automáticamente, pero puede ser null"]
+  imagen varchar(100) [default: "/ruta/a/la/imagen.png", note: "Esta imagen puede ser obtenida por la IA o por el usuario. En caso tal no existir imagen, se pondrá una general"]
+  id_tipo_dosis integer [ref: > tipo_dosis.id, unique]
+  id_componentes_medicamento integer [ref: > componentes_medicamento.id, unique]
+  id_tipo_medicamento integer [ref: > tipo_medicamento.id, unique]
+}
+
+Table pais {
+  id integer [primary key, unique, increment]
+  nombre varchar(150) [not null]
+  prefijo char(2) [not null]
+  sufijo char(4)
+  moneda char(3)
+}
+
+Table region {
+  id integer [primary key, unique, increment]
+  nombre varchar(100) [not null]
+  id_pais integer [ref: > pais.id, unique]
+}
+
+Table ciudad {
+  id integer [primary key, unique, increment]
+  nombre varchar(100) [not null]
+  id_region integer [ref: > region.id, unique]
+}
+
+Table codigo_postal {
+  id integer [primary key, unique, increment]
+  codigo varchar(20) [not null]
+  id_ciudad integer [ref: > ciudad.id, unique]
+}
+
+Table lugar_residencia {
+  id integer [primary key, unique, increment]
+  tipo_via varchar(50) [not null]
+  nombre_via varchar(50) [not null]
+  numero_residencia varchar(50) [not null]
+  piso_o_apartamento varchar(20) [not null]
+  indicaciones_adicionales varchar(255)
+  tipo_residencia residencia [not null]
+  id_codigo_postal integer [ref: > codigo_postal.id, unique]
+}
+
+Table lugar_cita_medica {
+  id integer [primary key, unique, increment]
+  nombre_centro_medico varchar(255) [not null]
+  direccion varchar(255) [note: "La dirección es elección del usuario si desea digitarla o no"]
+}
+
+Table especialidad_medica {
+  id integer [primary key, unique, increment]
+  nombre varchar(75) [not null]
+  descripcion varchar(255) [note: "La descripción puede colocarla la IA o el usuario mismo y es opcional"]
+}
+
+Table citas_medicas {
+  id integer [primary key, unique, increment]
+  fecha datetime [not null]
+  descripcion varchar(255) [note: "La descripción la da el mismo usuario y puede quedar vacío."]
+  estado estado.cita_medica [not null]
+  id_lugar_cita_medica integer [ref: > lugar_cita_medica.id, unique]
+  id_especialidad_medica integer [ref: > especialidad_medica.id, unique]
+  id_usuario integer [ref: > usuario.id, unique]
+}
+
+Table log_ia {
+  id integer [primary key, unique, increment]
+  clasificacion_prevista varchar(50) [not null]
+  prompt text [not null]
+  fecha datetime [not null, default: `now()`]
+  modelo_ia varchar(100)
+  version_ia varchar(30)
+
+  Note: "Todos los campos de esta tabla serán proporcionados por la respectiva información que tenga la IA en ejecución"
+}
+
+Table extension_documento {
+  id integer [primary key, unique, increment]
+  nombre varchar(14) [not null]
+}
+
+Table estado {
+  id integer [primary key, unique, increment]
+  nombre varchar(75) [not null]
+  descripcion varchar(255) [note: "La descripción la daría el usuario y es opcional"]
+}
+
+Table categoria {
+  id integer [primary key, unique, increment]
+  nombre varchar(75) [not null]
+  descripcion varchar(255) [note: "La descripción la daría el usuario y es opcional"]
+}
+
+Table documento {
+  id integer [primary key, unique, increment]
+  titulo varchar(100) [not null]
+  descripcion text(350) [note: "La descripción la puede generar el usuario o la misma IA en caso de que el usuario no la proporcione. Puede estar vacío"]
+  contenido_texto text [not null, note: "Es rellenado por la IA"]
+  ruta_guardado varchar(255) [not null, note:"Guarda la referencia de donde fue guardado en el equipo, para mayor optimización de la base de datos"]
+  tamanyo_documento int [not null]
+  fecha_guardado datetime [not null, default: `now()`]
+  id_especialidad_medica integer [ref: > especialidad_medica.id, unique]
+  id_usuario integer [ref: > usuario.id, unique]
+  id_log_ia integer [ref: > log_ia.id, unique]
+  id_extension_documento integer [ref: > extension_documento.id, unique]
+  id_estado integer [ref: > estado.id, unique]
+  id_categoria integer [ref: > categoria.id, unique]
+}
+
+Table usuario {
+  id integer [primary key, unique, increment]
+  edad tinyint(3) [not null, note: "Valor mínimo 0 y valor máximo 200"]
+  genero eleccion.genero [not null]
+  peso smallint(3) [not null, note: "valor mínimo 1kg y valor máximo 500kg"]
+  altura float [not null, note:"Los valores van desde 0.0mts hasta 4.9mts"]
+  fecha_nacimiento date [not null]
+  id_log_ia integer [ref: > log_ia.id, unique]
+  id_nombre_completo integer [ref: > nombre_completo.id, unique]
+  id_enfermedad integer [ref: > enfermedad.id, unique]
+  id_medicamentos integer [ref: > medicamentos.id, unique]
+  id_lugar_residencia integer [ref: > lugar_residencia.id, unique]
+}
+
+Table configuraciones {
+  id integer [primary key, unique, increment]
+  notificaciones varchar(255) [not null, default: "none"]
+  tema varchar(255) [not null, default: "none"]
+  idioma varchar(255) [not null, default: "none"]
+  id_usuario integer [ref: > usuario.id, unique]
+}
+
+Table historial_acciones {
+  id integer [primary key, unique, increment]
+  accion varchar(255) [not null]
+  fecha_registro datetime [not null, default: `now()`]
+  id_usuario integer [ref: > usuario.id, unique]
+}
+
+Table email {
+  id integer [primary key, unique, increment]
+  nombre_usuario varchar(45) [not null]
+  organizacion varchar(45) [not null]
+  tipo varchar(15) [not null]
+}
+
+Table intentos_login {
+  id integer [primary key, unique, increment]
+  fecha datetime [not null, default: `now()`]
+  direccion_ip varchar(15) [default: "null"]
+  exito tinyint(1) [not null]
+}
+
+Table credenciales {
+  id integer [primary key, unique, increment]
+  username varchar(30) [not null]
+  contrasenya varchar(255) [not null]
+  fecha_creacion datetime [not null, default: `now()`]
+  id_usuario integer [ref: > usuario.id, unique]
+  id_credenciales integer [ref: > email.id, unique]
+  id_intentos_login integer [ref: > intentos_login.id, unique]
+}

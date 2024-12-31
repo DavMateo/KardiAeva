@@ -1,0 +1,6 @@
+Draw.io  [Web app]
+DBDiagram [Web app]
+HTML5 [Desarrollo Web]
+CSS3 [Diseño Web]
+JavaScript Vanilla [Programación Web]
+Python 3.13 [Programación del servidor]

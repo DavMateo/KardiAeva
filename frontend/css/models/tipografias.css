@@ -1,0 +1,208 @@
+/* =========================== */
+/* === FUENTES DE RESPALDO === */
+/* =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');  /* Títulos y Resaltar */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');  /* Subtítulos y General */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');  /* Subtítulos y General */
+
+
+/* ============================================ */
+/* === FUENTES PERSONALIZADAS - PRINCIPALES === */
+/* ============================================ */
+
+/* Fuente de títulos y logos */
+@font-face {
+    font-family: 'Nocturne';
+    src: url(./../../assets/fonts/Nocturne/TTF/Nocturne.ttf) format('truetype'),
+        url(./../../assets/fonts/Nocturne/TTF/NocturneRough.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* Fuente para subtítulos y textos especiales a destacar */
+@font-face {
+    font-family: 'Thinoo';
+    src: url(./../../assets/fonts/Thinoo/thinoothin.otf) format('opentype');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Thinoo_bold';
+    src: url(./../../assets/fonts/Thinoo/thinoobold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+/*Fuente principal para textos comunes y de uso general como respaldo*/
+@font-face {
+    font-family: 'Rota_100';
+    src: url(./../../assets/fonts/Rota/Rota-Thin.otf) format('opentype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Rota_I100';
+    src: url(./../../assets/fonts/Rota/Rota-ThinItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Rota_200';
+    src: url(./../../assets/fonts/Rota/Rota-ExtraLight.otf) format('opentype');
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Rota_I200';
+    src: url(./../../assets/fonts/Rota/Rota-ExtraLightItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Rota_300';
+    src: url(./../../assets/fonts/Rota/Rota-Light.otf) format('opentype');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Rota_I300';
+    src: url(./../../assets/fonts/Rota/Rota-LightItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Rota';
+    src: url(./../../assets/fonts/Rota/Rota-Regular.otf) format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'RotaI';
+    src: url(./../../assets/fonts/Rota/Rota-Italic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rota_500';
+    src: url(./../../assets/fonts/Rota/Rota-SemiBold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Rota_I500';
+    src: url(./../../assets/fonts/Rota/Rota-SemiBoldItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Rota_600';
+    src: url(./../../assets/fonts/Rota/Rota-Bold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Rota_I600';
+    src: url(./../../assets/fonts/Rota/Rota-BoldItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Rota_700';
+    src: url(./../../assets/fonts/Rota/Rota-Black.otf) format('opentype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Rota_I700';
+    src: url(./../../assets/fonts/Rota/Rota-BlackItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Rota_800';
+    src: url(./../../assets/fonts/Rota/Rota-ExtraBold.otf) format('opentype');
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Rota_I800';
+    src: url(./../../assets/fonts/Rota/Rota-ExtraBoldItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Rota_900';
+    src: url(./../../assets/fonts/Rota/Rota-ExtraBlack.otf) format('opentype');
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Rota_I900';
+    src: url(./../../assets/fonts/Rota/Rota-ExtraBlackItalic.otf) format('opentype');
+    font-style: italic;
+    font-weight: 900;
+}
+
+
+/* Fuente secundaria de respaldo para texto comunes y de uso general */
+@font-face {
+    font-family: 'Actay_300';
+    src: url(./../../assets/fonts/Actay_Family/ActayCondensed-Thin.otf) format('opentype');
+    font-style: normal;
+    font-size: 300;
+}
+
+@font-face {
+    font-family: 'Actay_I300';
+    src: url(./../../assets/fonts/Actay_Family/ActayCondensed-ThinItalic.otf) format('opentype');
+    font-style: italic;
+    font-size: 300;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url(./../../assets/fonts/Actay_Family/Actay-Regular.otf) format('opentype');
+    font-style: normal;
+    font-size: 400;
+}
+
+@font-face {
+    font-family: 'ActayI';
+    src: url(./../../assets/fonts/Actay_Family/Actay-RegularItalic.otf) format('opentype');
+    font-style: italic;
+    font-size: 400;
+}
+
+@font-face {
+    font-family: 'Actay_600';
+    src: url(./../../assets/fonts/Actay_Family/ActayWide-Bold.otf) format('opentype');
+    font-style: normal;
+    font-size: 600;
+}
+
+@font-face {
+    font-family: 'Actay_I600';
+    src: url(./../../assets/fonts/Actay_Family/ActayWide-BoldItalic.otf) format('opentype');
+    font-style: italic;
+    font-size: 600;
+}

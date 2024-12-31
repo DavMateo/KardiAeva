@@ -1,0 +1,357 @@
+@import url('./variables.css');
+@import url('./essentials.css');
+
+
+.pieDePagina {
+    display: flex;
+    flex-direction: column;
+    background-color: #111827;
+    color: var(--bg_color);
+    padding: 0 .9rem;
+
+    & .infoPagina {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1.4rem;
+        background-color: #1E45B1;
+        height: 12rem;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--color_blanco);
+        border-radius: 0 0 var(--br_estandar) var(--br_estandar);
+
+        & .infoPagina__anyo {
+            position: relative;
+            width: 14.15rem;
+            
+            & .anyo__figura {
+                display: flex;
+                padding: .5rem;
+                border-radius: var(--br_estandar);
+                border: 3px solid var(--color_blanco);
+                width: 8rem;
+                justify-content: center;
+                font-family: var(--ff_estandar6);
+                letter-spacing: 1px;
+
+                &::before {
+                    content: "";
+                    width: 13rem;
+                    height: 2px;
+                    border-radius: var(--br_estandar);
+                    background-color: var(--color_blanco);
+                    position: absolute;
+                    top: 0;
+                    left: 1rem;
+                }
+
+                &::after {
+                    content: "2024";
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 6rem;
+                    font-size: var(--sz_letraSubtitulo);
+                }
+            }
+        }
+
+        & .infoPagina__lugar {
+            position: relative;
+            width: 16.2rem;
+
+            & .lugar__figura {
+                display: flex;
+                padding: .5rem;
+                border-radius: var(--br_estandar);
+                border: 3px solid var(--color_blanco);
+                width: 8rem;
+                justify-content: center;
+                font-family: var(--ff_estandar6);
+                letter-spacing: 1px;
+
+                &::before {
+                    content: "";
+                    width: 15rem;
+                    height: 2px;
+                    border-radius: var(--br_estandar);
+                    background-color: var(--color_blanco);
+                    position: absolute;
+                    top: 0;
+                    left: 1rem;
+                }
+
+                &::after {
+                    content: "Floridablanca, Santander";
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 7.85rem;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    & .sloganWeb {
+        display: flex;
+        gap: 1.4rem;
+        margin: 2.5rem .45rem;
+        align-items: center;
+
+        & .sloganWeb__logo {
+            display: inline-flex;
+            width: 4.63rem;
+            height: 5.4rem;
+
+            & .logo__img {
+                object-fit: cover;
+            }
+        }
+
+        & .sloganWeb__texto {
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+            justify-content: space-between;
+
+            & .texto__frase {
+                font-size: 23px;
+                letter-spacing: 2px;
+
+                & .frase__parte1, .frase__parte2 {
+                    font-family: var(--ff_estandar5);
+
+                    & .referencia {
+                        color: var(--color_terciario);
+                        font-family: var(--ff_estandar7I);
+                    }
+                }
+            }
+
+            & .texto__marcaLogo {
+                font-family: var(--ff_titulo);
+                font-size: var(--sz_letraGrande);
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+    & hr {
+        width: 50%;
+        align-self: center;
+        border-color: #808B96;
+    }
+
+    & .contactame {
+        display: flex;
+        flex-direction: column;
+        margin: 2.5rem .45rem;
+        border: 1px solid rgba(255, 255, 255, .18);
+        max-width: 700px;
+        background: rgba(255, 255, 255, .25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 10px;
+        padding: .7rem;
+        border-left: 5px solid var(--color_terciario);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        
+        & .contactame__form {
+          & .form__titulo {
+            display: block;
+            color: var(--color_blanco);
+            font-size: 1.7rem;
+            font-family: var(--ff_estandar8);
+            margin-bottom: 20px;
+          }
+
+          & input {
+            color: var(--color_principal);
+            width: 100%;
+            background-color: var(--color_blanco);
+            border: none;
+            outline: none;
+            padding: 1rem;
+            margin-bottom: 1.4rem;
+            font-family: var(--ff_estandar6);
+            transition: all 0.2s ease-in-out;
+            border-left: 1px solid transparent;
+            border-radius: 10px;
+            font-size: var(--fs_text);
+            letter-spacing: 1px;
+
+            &:focus {
+              border-left: 5px solid var(--color_terciario);
+            }
+          }
+
+          & .form__textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background-color: var(--color_blanco);
+            border-radius: 10px;
+            color: var(--color_principal);
+            font-family: var(--ff_estandar6);
+            letter-spacing: 1px;
+            font-size: var(--fs_text);
+            resize: none;
+            max-height: 14rem;
+            margin-bottom: 1.4rem;
+            border-left: 1px solid transparent;
+            transition: all 0.2s ease-in-out;
+
+            &:focus {
+              border-left: 5px solid var(--color_terciario);
+            }
+          }
+
+          & .form__btns {
+            display: flex;
+            gap: 1rem;
+
+            & .btns__enviar {
+              display: flex;
+              flex-basis: 70%;
+              justify-content: center;
+              align-items: center;
+              background-color: var(--color_principal);
+              padding: .8rem;
+              color: var(--color_secundario);
+              text-align: center;
+              font-family: var(--ff_estandar6);
+              letter-spacing: 1px;
+              transition: all 0.2s ease-in-out;
+              border: none;
+              border-radius: 10px;
+              box-shadow: 2px 5px 14px -3px rgba(0, 0, 0, .6);
+              cursor: pointer;
+              font-size: var(--fs_text);
+
+              &:hover {
+                background: var(--color_secundario);
+                border: 3px solid var(--color_principal);
+                color: var(--color_principal);
+                font-family: var(--ff_estandar7);
+              }
+            }
+
+            & .btns__eliminar {
+              flex-basis: 30%;
+              border: none;
+              position: relative;
+              text-align: center;
+              padding: .8rem;
+              color: var(--color_secundario);
+              font-family: var(--ff_estandar6);
+              font-size: var(--fs_text);
+              clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+              transition: all 0.2s ease-in-out;
+              border-radius: 10px 10px 0 10px;
+              background: none;
+
+              &:hover {
+                background: var(--color_terciario);
+                color: var(--color_principal);
+                box-shadow: 2px 5px 18px 0px rgba(255, 255, 255, .4);
+                font-family: var(--ff_estandar7);
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 85%;
+                height: 2px;
+                background-color: var(--color_terciario);
+                top: 0;
+                left: 7px;
+              }
+            }
+          }
+        }
+    }
+
+    & .links {
+      display: flex;
+      flex-direction: column;
+      margin: 2.5rem .45rem;
+
+      & .links__mapaSitio, .links__recursos, .links__legal {
+        margin-bottom: 2rem;
+        
+        & .titulo {
+          font-size: var(--sz_letraSubtitulo);
+          font-family: var(--ff_subtituloN);
+          letter-spacing: 3px;
+          padding-bottom: .4rem;
+        }
+
+        & .enlaces {
+          display: flex;
+          flex-direction: column;
+          gap: .3rem;
+          list-style-type: none;
+          margin: 0 1rem;
+
+          & .item {
+            font-family: var(--ff_estandar);
+            letter-spacing: 1px;
+
+            & a {
+              text-decoration: none;
+              color: var(--color_secundario);
+
+              &:hover {
+                font-family: var(--ff_estandar6I);
+                font-size: calc(var(--fs_text) + 3px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .copyright {
+      display: flex;
+      margin: 2.5rem .45rem 0rem .45rem;
+      justify-content: center;
+      align-items: center;
+
+      & .copyright__texto {
+        letter-spacing: 2px;
+        font-family: var(--ff_estandar5);
+        font-size: var(--sz_letraMediana);
+        color: #808B96;
+      }
+    }
+
+    & .redeSociales {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem .45rem 0rem .45rem;
+
+      & .redeSociales__instagram, .redeSociales__cafe, .redeSociales__github, .redeSociales__youtube {
+        & img {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+      }
+
+      & .redeSociales__youtube {
+        & img {
+          width: 3rem;
+        }
+      }
+    }
+}
