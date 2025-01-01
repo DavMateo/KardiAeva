@@ -31,6 +31,7 @@
                 border: 3px solid var(--color_blanco);
                 width: 8rem;
                 justify-content: center;
+                align-items: center;
                 font-family: var(--ff_estandar6);
                 letter-spacing: 1px;
 
@@ -71,6 +72,7 @@
                 border: 3px solid var(--color_blanco);
                 width: 8rem;
                 justify-content: center;
+                align-items: center;
                 font-family: var(--ff_estandar6);
                 letter-spacing: 1px;
 
@@ -124,7 +126,7 @@
             justify-content: space-between;
 
             & .texto__frase {
-                font-size: 23px;
+                font-size: 20px;
                 letter-spacing: 2px;
 
                 & .frase__parte1, .frase__parte2 {

@@ -1,0 +1,100 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 4rem 1.35rem;
+
+    & .infoinicial {
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        & .infoinicial__titulo {
+            font-family: var(--ff_subtituloN);
+            letter-spacing: 2px;
+            text-align: center;
+            font-size: var(--sz_letraSubtitulo);
+        }
+
+        & .infoinicial__descripcion {
+            letter-spacing: 1px;
+            text-align: center;
+            font-size: 22px;
+        }
+    }
+
+    & .containerTarjetas {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+
+        & .containerTarjetas__seguridad, .containerTarjetas__productividad, .containerTarjetas__personalizacion {
+            display: flex;
+            flex-direction: column;
+            border-radius: var(--br_estandar);
+            background-color: var(--color_blanco);
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            gap: 1.25rem;
+            box-shadow: var(--shadow);
+
+            & .icono {
+                display: flex;
+                background-color: #DBEAFE;
+                justify-content: center;
+                align-items: center;
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 8px;
+
+                & svg {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+
+            & .contenido {
+                display: flex;
+                flex-direction: column;
+                gap: .4rem;
+
+                & .contenido__titulo {
+                    text-align: center;
+                    font-size: var(--sz_letraSubtitulo);
+                    letter-spacing: 2px;
+                }
+
+                & .contenido__descripcion {
+                    font-size: var(--sz_letraSemigrande);
+                    text-align: center;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    & .caracteristicas {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        & .caracteristicas__ia, .caracteristicas__ejecucionLocal, .caracteristicas__archivosCentralizados {
+            display: flex;
+            background-color: var(--color_blanco);
+            width: calc((100% / 3) - (.3rem * 2));
+            height: 6rem;
+            box-shadow: var(--shadow);
+            border-radius: var(--br_estandar);
+
+            & svg {
+                margin: auto auto;
+            }
+        }
+    }
+}
