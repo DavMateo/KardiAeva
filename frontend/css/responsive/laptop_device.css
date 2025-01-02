@@ -1,0 +1,260 @@
+/* Responsive pantallas >769px y <=1024px */
+
+@import url('./../models/variables.css');
+@import url('./../models/essentials.css');
+
+@media (max-width: 900px) and (min-width: 769px) {
+    /* Encabezado */
+    .encabezado {
+        & .hero {
+            & .hero__textos {
+                & .textos__titulo {
+                    font-size: calc(var(--sz_letraSubtitulo) + 4px);
+                    letter-spacing: 3px;
+                }
+
+                & .textos__descripcion {
+                    font-family: var(--ff_estandar6);
+                    font-size: calc(var(--sz_letraSubtitulo) - 1px);
+                }
+            }
+
+            & .hero__btns {
+                & .btns__comenzar {
+                    font-size: calc(var(--sz_letraSubtitulo) + 2px);
+                    padding: 2.5% 9.2%;
+
+                    & svg {
+                        width: 30px;
+                    }
+
+                    & .arr-1 {
+                        right: 24px;
+                        bottom: 20px;
+                    }
+
+                    & .arr-2 {
+                        bottom: 21px;
+                    }
+
+                    &:hover {
+                        & .arr-2 {
+                            left: 24px;
+                        }
+                    }
+                }
+
+                & .btns__sabermas {
+                    font-size: var(--sz_letraSubtitulo);
+
+                    &:hover {
+                        &::before {
+                            top: -75%;
+                            left: -42px;
+                        }
+                    }
+
+                    &::before {
+                        width: 400px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Principal */
+    .principal {
+        & .infoinicial {
+            margin-bottom: 4.5rem;
+            gap: .85rem;
+
+            & .infoinicial__titulo {
+                font-size: calc(var(--sz_letraTitulo) + 3px);
+                letter-spacing: 3px;
+            }
+
+            & .infoinicial__descripcion {
+                font-size: var(--sz_letraSubtitulo);
+            }
+        }
+    }
+
+    /* Pie De Página */
+    .pieDePagina {
+        & .infoPagina {
+            & .infoPagina__anyo {
+                width: 41.1rem;
+
+                & .anyo__figura {
+                    width: 15rem;
+                    height: 5rem;
+                    font-size: var(--sz_letraTitulo);
+                    border: 5px solid var(--color_blanco);
+
+                    &::before {
+                        width: 40rem;
+                        height: 5px;
+                    }
+
+                    &::after {
+                        width: 26rem;
+                        font-size: calc(var(--sz_letraTitulo) + 1rem);
+                    }
+                }
+            }
+
+            & .infoPagina__lugar {
+                width: 41.1rem;
+
+                & .lugar__figura {
+                    width: 15rem;
+                    height: 5rem;
+                    font-size: var(--sz_letraTitulo);
+                    border: 5px solid var(--color_blanco);
+
+                    &::before {
+                        width: 40rem;
+                        height: 5px;
+                    }
+
+                    &::after {
+                        width: 26rem;
+                        font-size: calc(var(--sz_letraTitulo));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+    /* Encabezado */
+    .encabezado {
+        & .hero {
+            & .hero__textos {
+                gap: 1rem;
+
+                & .textos__titulo {
+                    font-size: calc(var(--sz_letraTitulo) + 8px);
+                    letter-spacing: 5px;
+                    
+                    & .titulo__texto {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                & .textos__descripcion {
+                    font-family: var(--ff_estandar6);
+                    font-size: calc(var(--sz_letraSubtitulo) + 6px);
+                }
+            }
+
+            & .hero__btns {
+                & .btns__comenzar {
+                    font-size: calc(var(--sz_letraSubtitulo) + 2px);
+                    padding: 2.5% 9.2%;
+
+                    & svg {
+                        width: 30px;
+                    }
+
+                    & .arr-1 {
+                        right: 27px;
+                        bottom: 23px;
+                    }
+
+                    & .arr-2 {
+                        bottom: 25px;
+                    }
+
+                    &:hover {
+                        & .arr-2 {
+                            left: 27px;
+                        }
+                    }
+                }
+
+                & .btns__sabermas {
+                    font-size: var(--sz_letraSubtitulo);
+
+                    &:hover {
+                        &::before {
+                            top: -75%;
+                            left: -67px;
+                        }
+                    }
+
+                    &::before {
+                        width: 500px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Principal */
+    .principal {
+        & .infoinicial {
+            margin-bottom: 6rem;
+            gap: 1rem;
+
+            & .infoinicial__titulo {
+                font-size: calc(var(--sz_letraTitulo) + 1rem);
+                letter-spacing: 3px;
+            }
+
+            & .infoinicial__descripcion {
+                font-size: calc(var(--sz_letraSubtitulo) + 6px);
+            }
+        }
+    }
+
+    /* Pie De Página */
+    .pieDePagina {
+        & .infoPagina {
+            & .infoPagina__anyo {
+                width: 52.4rem;
+
+                & .anyo__figura {
+                    width: 15rem;
+                    height: 5rem;
+                    font-size: var(--sz_letraTitulo);
+                    border: 5px solid var(--color_blanco);
+
+                    &::before {
+                        width: 51.35rem;
+                        height: 5px;
+                    }
+
+                    &::after {
+                        width: 37.5rem;
+                        font-size: calc(var(--sz_letraTitulo) + 1.4rem);
+                    }
+                }
+            }
+
+            & .infoPagina__lugar {
+                width: 52.4rem;
+
+                & .lugar__figura {
+                    width: 15rem;
+                    height: 5rem;
+                    font-size: var(--sz_letraTitulo);
+                    border: 5px solid var(--color_blanco);
+
+                    &::before {
+                        width: 51.35rem;
+                        height: 5px;
+                    }
+
+                    &::after {
+                        width: 37.5rem;
+                        font-size: calc(var(--sz_letraTitulo) + 1rem);
+                    }
+                }
+            }
+        }
+    }
+}

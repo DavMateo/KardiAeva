@@ -91,6 +91,11 @@
             height: 6rem;
             box-shadow: var(--shadow);
             border-radius: var(--br_estandar);
+            transition: .25s all ease-in-out;
+
+            &:hover {
+                background-color: #DBEAFE;
+            }
 
             & svg {
                 margin: auto auto;

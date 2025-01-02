@@ -1,0 +1,140 @@
+/* Responsive pantallas > 1025px y <= 1920px */
+
+@import url('./../models/variables.css');
+@import url('./../models/essentials.css');
+
+@media  (min-width: 1025px) {
+    /* Encabezado */
+    .encabezado {
+        height: 100vh;
+        padding: 3rem 3rem;
+
+        & .encabezado__img {
+            height: 100vh;
+        }
+
+        & .hero {
+            & .hero__textos {
+                & .textos__titulo {
+                    font-size: calc(var(--sz_letraTitulo) + 8px);
+                    letter-spacing: 5px;
+
+                    & .titulo__texto {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                & .textos__descripcion {
+                    font-family: var(--ff_estandar6);
+                    font-size: calc(var(--sz_letraSubtitulo) + 6px);
+                }
+            }
+
+            & .hero__btns {
+                & .btns__comenzar {
+                    font-size: calc(var(--sz_letraSubtitulo) + 2px);
+                    padding: 2% 7.9%;
+
+                    & svg {
+                        width: 30px;
+                    }
+
+                    & .arr-1 {
+                        right: 31px;
+                        bottom: 20px;
+                    }
+
+                    & .arr-2 {
+                        bottom: 21px;
+                    }
+
+                    &:hover {
+                        & .arr-2 {
+                            left: 27px;
+                        }
+                    }
+                }
+
+                & .btns__sabermas {
+                    font-size: var(--sz_letraSubtitulo);
+
+                    &:hover {
+                        &::before {
+                            top: -75%;
+                            left: -56px;
+                        }
+                    }
+
+                    &::before {
+                        width: 600px;
+                        height: 400px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Principal */
+    .principal {
+        & .infoinicial {
+            margin-bottom: 6rem;
+            gap: 1rem;
+
+            & .infoinicial__titulo {
+                font-size: calc(var(--sz_letraTitulo) + 1rem);
+                letter-spacing: 3px;
+            }
+
+            & .infoinicial__descripcion {
+                font-size: calc(var(--sz_letraSubtitulo) + 6px);
+            }
+        }
+    }
+
+    /* Pie De Página */
+    .pieDePagina {
+        & .infoPagina {
+            & .infoPagina__anyo {
+                width: 62.4rem;
+
+                & .anyo__figura {
+                    width: 17rem;
+                    height: 5rem;
+                    font-size: var(--sz_letraTitulo);
+                    border: 5px solid var(--color_blanco);
+
+                    &::before {
+                        width: 65rem;
+                        height: 5px;
+                    }
+
+                    &::after {
+                        width: 46rem;
+                        font-size: calc(var(--sz_letraTitulo) + 1.4rem);
+                    }
+                }
+            }
+
+            & .infoPagina__lugar {
+                width: 62.4rem;
+
+                & .lugar__figura {
+                    width: 17rem;
+                    height: 5rem;
+                    font-size: var(--sz_letraTitulo);
+                    border: 5px solid var(--color_blanco);
+
+                    &::before {
+                        width: 65rem;
+                        height: 5px;
+                    }
+
+                    &::after {
+                        width: 46rem;
+                        font-size: calc(var(--sz_letraTitulo) + 1.4rem);
+                    }
+                }
+            }
+        }
+    }
+}

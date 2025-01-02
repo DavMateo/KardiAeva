@@ -1,5 +1,8 @@
 /* Responsive pantallas >375px y <=480px */
 
+@import url('./../models/variables.css');
+@import url('./../models/essentials.css');
+
 @media (max-width: 480px) and (min-width: 376px) {
     /* Encabezado */
     .encabezado {
@@ -7,43 +10,12 @@
 
         & .hero {
             & .hero__textos {
-                font-size: var(--sz_letraMediana);
-
                 & .textos__titulo {
                     font-size: 22px;
                 }
 
                 & .textos__descripcion {
-                    font-size: var(--sz_letraGrande);
-                }
-            }
-
-            & .hero__btns {
-                & .btns__comenzar {
-                    font-size: var(--sz_letraSemigrande);
-
-                    & svg {
-                        width: 20px;
-                    }
-
-                    & .arr-1 {
-                        right: 14px;
-                        bottom: 12px;
-                    }
-
-                    & .arr-2 {
-                        bottom: 12px;
-                    }
-
-                    &:hover {
-                        & .arr-2 {
-                            left: 12px;
-                        }
-                    }
-                }
-
-                & .btns__sabermas {
-                    font-size: var(--sz_letraSemigrande);
+                    font-size: 24px;
                 }
             }
         }
@@ -103,43 +75,6 @@
                         width: 11rem;
                         text-align: center;
                     }
-                }
-            }
-        }
-
-        & .links {
-            & .links__mapaSitio, .links__recursos, .links__legal {
-                margin-bottom: 2.3rem;
-
-                & .titulo {
-                    font-size: 34px;
-                }
-
-                & .enlaces {
-                    font-size: var(--sz_letraSemigrande);
-
-                    & .item {
-                        & a {
-                            &:hover {
-                                font-size: calc(var(--sz_letraGrande) + 2px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        & .redeSociales {
-            & .redeSociales__instagram, .redeSociales__cafe, .redeSociales__github, .redeSociales__youtube {
-                & img {
-                    width: 2.8rem;
-                    height: 2.8rem;
-                }
-            }
-
-            & .redeSociales__youtube {
-                & img {
-                    width: 3.8rem;
                 }
             }
         }
@@ -211,43 +146,6 @@
 
                 & .texto__marcaLogo {
                     font-size: calc(var(--sz_letraSubtitulo) + 1px);
-                }
-            }
-        }
-
-        & .links {
-            & .links__mapaSitio, .links__recursos, .links__legal {
-                margin-bottom: 2.3rem;
-
-                & .titulo {
-                    font-size: 34px;
-                }
-
-                & .enlaces {
-                    font-size: var(--sz_letraSemigrande);
-
-                    & .item {
-                        & a {
-                            &:hover {
-                                font-size: calc(var(--sz_letraGrande) + 2px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        & .redeSociales {
-            & .redeSociales__instagram, .redeSociales__cafe, .redeSociales__github, .redeSociales__youtube {
-                & img {
-                    width: 2.8rem;
-                    height: 2.8rem;
-                }
-            }
-
-            & .redeSociales__youtube {
-                & img {
-                    width: 3.8rem;
                 }
             }
         }

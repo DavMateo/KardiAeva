@@ -2,7 +2,7 @@
 @import url('./../essentials.css');
 
 .encabezado {
-    background-color: var(--color_principal);
+    background-color: rgba(30, 69, 177, .86);
     width: 100%;
     height: 75vh;
     padding: 2.5rem 1.35rem;
@@ -14,8 +14,8 @@
         left: 0;
         width: 100vw;
         height: 80vh;
-        opacity: 0.12;
         object-fit: cover;
+        z-index: -10;
     }
 
     & .hero {
