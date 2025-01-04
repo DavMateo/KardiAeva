@@ -16,11 +16,118 @@
     </head>
 
     <body>
-        <header class="encabezado" id="encabezado"></header>
+        <main class="principal" id="principal">
+            <div class="credencialesMysql">
+                <form class="credencialesMysql__formulario" id="credMysql">
+                    <div class="formulario__titulo">
+                        <legend>Credenciales MySQL</legend>
+                    </div>
 
-        <main class="principal" id="principal"></main>
+                    <div class="formulario__usuario">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" name="usuario" id="usuario" required />
+                    </div>
 
-        <footer class="pieDePagina" id="pieDePagina"></footer>
+                    <div class="formulario__contrasenya">
+                        <label for="contrasenya">Contraseña</label>
+                        <input type="password" name="contrasenya" id="contrasenya" required />
+                    </div>
+
+                    <div class="formulario__host">
+                        <label for="host">Host</label>
+                        <input type="text" name="host" id="host" required />
+                    </div>
+
+                    <div class="formulario__puerto">
+                        <label for="puerto">Puerto</label>
+                        <input type="number" name="puerto" id="puerto" required min="1" max="65565" />
+                    </div>
+
+                    <div class="formulario__baseDeDatos">
+                        <label for="baseDeDatos">Nombre Base de Datos</label>
+                        <input type="text" name="baseDeDatos" id="baseDeDatos" required />
+                    </div>
+                </form>
+            </div>
+
+            <div class="informacionPersonal">
+                <form class="informacionPersonal__formulario" id="infoPersona">
+                    <div class="formulario__titulo">
+                        <legend>Información Personal</legend>
+                    </div>
+
+                    <div class="formulario__residencia">
+                        <div class="residencia__tipoVia">
+                            <label for="tipoVia">Tipo Vía</label>
+                            <input type="text" name="tipoVia" id="tipoVia" required />
+                        </div>
+
+                        <div class="residencia__nombreVia">
+                            <label for="nombreVia">Nombre de la Vía</label>
+                            <input type="text" name="nombreVia" id="nombreVia" required />
+                        </div>
+
+                        <div class="residencia__numero">
+                            <label for="numeroResidencia">Número Donde Reside</label>
+                            <input type="text" name="numeroResidencia" id="numeroResidencia" required />
+                        </div>
+
+                        <div class="residencia__pisoApt">
+                            <label for="pisoOrApt">Piso o Apartamento</label>
+                            <input type="text" name="pisoOrApt" id="pisoOrApt" required />
+                        </div>
+
+                        <div class="residencia__codigoPostal">
+                            <label for="codigoPostal">Código Postal</label>
+                            <input type="text" name="codigoPostal" id="codigoPostal" />
+                        </div>
+
+                        <div class="residencia__indicacionesAdicionales">
+                            <label for="indicacionesAdicionales">Indicaciones Adicionales</label>
+                            <textarea name="indicacionesAdicionales" id="indicacionesAdicionales"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="formulario__fechaNacimiento">
+                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                        <input type="date" name="fechaNacimiento" id="fechaNacimiento" />
+                    </div>
+
+                    <div class="formulario__genero">
+                        <label for="genero">Género</label>
+                        <select name="genero" id="genero" required>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                        </select>
+                    </div>
+
+                    <div class="formulario__peso">
+                        <label for="peso">Peso (Kg)</label>
+                        <input type="number" name="peso" id="peso" required min="0" max="600" />
+                    </div>
+
+                    <div class="formulario__estatura">
+                        <label for="estatura">Estatura (cm)</label>
+                        <input type="number" name="estatura" id="estatura" required min="10" max="450" />
+                    </div>
+
+                    <div class="formulario__edad">
+                        <label for="edad">Edad</label>
+                        <input type="number" name="edad" id="edad" required min="0" max="250" />
+                    </div>
+
+                    <div class="formulario__nickname">
+                        <label for="nickname">Nickname</label>
+                        <input type="text" name="nickname" id="nickname" required />
+                    </div>
+
+                    <div class="formulario__btns">
+                        <button class="btns__guardar" type="submit">Guardar información</button>
+                        <button class="btns__rehacer" type="reset">Rehacer</button>
+                    </div>
+                </form>
+            </div>
+        </main>
     </body>
 
 </html>
