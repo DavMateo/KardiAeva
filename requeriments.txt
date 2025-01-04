@@ -3,3 +3,10 @@ uvicorn
 sqlalchemy
 sqlalchemy-utils
 pymysql
+torch  "Entrenar IA
+transformers  "Entrenar IA
+datasets  "Entrenar IA
+scikit-learn  "Entrenar IA
+numpy  "Entrenar IA
+tqdm  "Entrenar IA
+wandb  "Entrenar IA

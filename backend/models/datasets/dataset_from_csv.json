@@ -1,0 +1,474 @@
+[
+    {
+        "texto": "Paciente masculino de 45 años con antecedentes de hipertensión arterial y diabetes mellitus tipo 2. Presenta dolor abdominal recurrente. Se recomienda evaluación por gastroenterología.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 30 años, sin antecedentes médicos significativos. Presenta cefalea crónica y náuseas. Diagnóstico preliminar: migraña con aura. Se sugiere iniciar tratamiento con triptanos.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Niña de 8 años con fiebre alta persistente, diagnóstico presuntivo de fiebre tifoidea. Se solicita hemocultivo y tratamiento con antibióticos de amplio espectro.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente masculino de 60 años con diagnóstico confirmado de insuficiencia cardíaca congestiva. Refiere disnea al esfuerzo y edema en miembros inferiores. Ajuste en medicación diurética recomendado.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 25 años con fatiga crónica y dolor muscular generalizado. Diagnóstico presuntivo de fibromialgia. Se sugiere manejo multidisciplinario.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paracetamol 500 mg, tomar cada 8 horas por 5 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Ibuprofeno 400 mg, cada 12 horas después de las comidas por 7 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Amoxicilina 500 mg, tomar cada 8 horas por 10 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Metformina 850 mg, una vez al día con el desayuno.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Losartán 50 mg, una tableta cada noche antes de dormir.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Se observa leve desviación del tabique nasal sin evidencia de fracturas óseas.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Radiografía de tórax muestra opacidades en el lóbulo inferior derecho, compatibles con neumonía.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Resonancia magnética cerebral sin hallazgos relevantes. Estructuras anatómicas normales.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Ultrasonido abdominal revela cálculos biliares múltiples en la vesícula biliar, sin signos de inflamación.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Tomografía computarizada de cráneo evidencia edema cerebral leve en región frontal.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Paciente masculino de 45 años con antecedentes de hipertensión arterial y diabetes mellitus tipo 2. Refiere dolor abdominal recurrente de dos meses de evolución, asociado a pérdida de peso no intencionada y episodios ocasionales de vómito. Exámenes previos muestran niveles elevados de glucosa y presión arterial descontrolada. Se recomienda evaluación por gastroenterología y ajustes en la medicación antihipertensiva.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 30 años, sin antecedentes médicos significativos. Consulta por cefalea crónica de intensidad moderada, acompañada de náuseas y sensibilidad a la luz. Episodios aumentaron en frecuencia durante el último mes, especialmente bajo estrés laboral. Diagnóstico presuntivo: migraña con aura. Se sugiere iniciar tratamiento profiláctico con triptanos y seguimiento neurológico.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Niña de 8 años con fiebre alta persistente (39.5°C) de cinco días de duración, acompañada de dolor abdominal y diarrea. Exámenes preliminares en urgencias muestran leucocitosis y alteraciones hepáticas. Diagnóstico presuntivo: fiebre tifoidea. Se solicita hemocultivo para confirmar y se inicia tratamiento empírico con ceftriaxona intravenosa.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente masculino de 60 años con diagnóstico confirmado de insuficiencia cardíaca congestiva. Presenta disnea progresiva al esfuerzo y edema bilateral en extremidades inferiores. ",
+        "categoria": " fumador crónico"
+    },
+    {
+        "texto": "Paciente femenino de 28 años con dolor pélvico intenso. Ultrasonido revela quiste ovárico hemorrágico de 5 cm. Programar cirugía laparoscópica.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente masculino de 30 años con dolor lumbar agudo tras levantar un objeto pesado. Resonancia magnética evidencia hernia discal en L5-S1. Iniciar terapia física.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Amoxicilina 875 mg + ácido clavulánico, cada 12 horas durante 7 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Ciprofloxacino 500 mg, cada 12 horas por 10 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Dexametasona 4 mg, inyectable, cada 12 horas por 3 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Insulina glargina 10 unidades, antes de dormir.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Ranitidina 150 mg, tomar antes de las comidas por 4 semanas.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Ultrasonido abdominal detecta hepatoesplenomegalia leve sin masas evidentes.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Radiografía de cadera muestra fractura intertrocantérica en el fémur izquierdo. Programar cirugía urgente.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Tomografía computarizada de abdomen muestra absceso hepático de 3 cm en el lóbulo derecho.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Ecografía tiroidea revela nódulo de 1.5 cm con calcificaciones. Clasificación TIRADS 4. Se recomienda biopsia por aspiración.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Resonancia magnética de columna cervical evidencia mielopatía compresiva en C5-C6.",
+        "categoria": "imagenología"
+    },
+    {
+        "texto": "Perfil renal muestra creatinina elevada en 2.8 mg/dL y urea en 80 mg/dL. Evaluar insuficiencia renal crónica.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Pruebas de función hepática muestran ALT y AST elevadas, compatibles con hepatitis alcohólica.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Examen de coagulación revela INR en 4.0, indicativo de riesgo de hemorragia. Suspender anticoagulantes temporalmente.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Perfil lipídico muestra triglicéridos elevados en 400 mg/dL. Iniciar fibratos y dieta baja en grasas.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Hemoglobina glucosilada de 8.5%, indicativa de mal control glucémico. Ajustar dosis de insulina.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Prueba de esfuerzo cardíaco positiva para isquemia miocárdica en esfuerzo moderado. Programar angiografía coronaria.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Electrocardiograma Holter de 24 horas revela episodios frecuentes de taquicardia supraventricular. Evaluar manejo farmacológico.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Ecocardiograma muestra hipertrofia ventricular izquierda severa. Controlar presión arterial.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Densitometría ósea revela osteoporosis en columna lumbar con T-score de -3.0. Iniciar tratamiento con bifosfonatos.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Prueba de función pulmonar muestra obstrucción moderada compatible con EPOC. Incrementar broncodilatadores.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Electromiografía evidencia neuropatía periférica axonal en extremidades inferiores. Evaluar causas metabólicas.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Prueba de tolerancia a la glucosa indica diabetes mellitus con niveles de 220 mg/dL a las 2 horas.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Angiografía coronaria revela oclusión del 90% en arteria descendente anterior. Programar intervención coronaria percutánea.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Prueba de función vestibular muestra hiporreflexia bilateral. Diagnóstico: enfermedad de Ménière.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Biopsia de piel positiva para vasculitis leucocitoclástica. Iniciar manejo inmunosupresor.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Paciente femenina de 52 años con antecedentes de hipotiroidismo. Presenta fatiga, aumento de peso y bradicardia. Se solicita perfil tiroideo.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente masculino de 28 años sin antecedentes relevantes. Sufre esguince de tobillo durante práctica deportiva. Se indica reposo y fisioterapia.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente de 78 años con diagnóstico de EPOC. Refiere disnea y tos productiva. Se ajusta tratamiento broncodilatador.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 35 años con antecedentes de ansiedad. Presenta palpitaciones y dificultad para conciliar el sueño. Se recomienda terapia y manejo del estrés.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Niño de 6 años con diagnóstico de asma. Presenta tos y sibilancias. Se indica nebulización con salbutamol.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Electrocardiograma: Ritmo sinusal, frecuencia cardíaca de 72 lpm. Sin alteraciones significativas.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Espirometría: Patrón obstructivo leve. Capacidad vital forzada (FVC) 75%. Volumen espiratorio forzado en el primer segundo (FEV1) 68%.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Audiometría: Hipoacusia neurosensorial bilateral leve en frecuencias agudas.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Holter de presión arterial: Presencia de hipertensión arterial nocturna.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Prueba de esfuerzo: Prueba positiva para isquemia miocárdica.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Hemograma completo: Leucocitos 7.500/mm3, Hemoglobina 14 g/dL, Plaquetas 250.000/mm3.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Química sanguínea: Glucosa 90 mg/dL, Urea 40 mg/dL, Creatinina 1.0 mg/dL.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Perfil lipídico: Colesterol total 200 mg/dL, Triglicéridos 150 mg/dL, HDL 45 mg/dL, LDL 120 mg/dL.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Examen de orina: Sedimento con presencia de leucocitos y bacterias. Se solicita urocultivo.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Prueba de función tiroidea: TSH elevada, T4 libre disminuida.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Radiografía de tórax: Se observa cardiomegalia leve.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Tomografía axial computarizada (TAC) abdominal: Presencia de litiasis renal.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Resonancia magnética (RM) de rodilla: Ruptura de menisco interno.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Ecografía abdominal: Hígado con esteatosis leve.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Mamografía: Presencia de microcalcificaciones sospechosas. Se recomienda biopsia.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Amoxicilina 500 mg, cada 8 horas por 7 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Ibuprofeno 400 mg, cada 6 horas según necesidad para el dolor.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Omeprazol 20 mg, una vez al día en ayunas.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Paracetamol 1 g, cada 8 horas si presenta fiebre.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Loratadina 10 mg, una vez al día.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Paciente masculino de 68 años con antecedentes de tabaquismo. Presenta tos crónica y disnea. Se solicita radiografía de tórax y espirometría.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 40 años con migrañas frecuentes. Refiere episodios de cefalea intensa con aura visual. Se ajusta tratamiento profiláctico.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente de 55 años con diabetes tipo 2. Presenta neuropatía periférica en miembros inferiores. Se recomienda control glucémico estricto.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 22 años con dolor abdominal en fosa ilíaca derecha. Se sospecha apendicitis. Se solicita ecografía abdominal urgente.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente de 30 años con antecedente de fractura de tibia. Presenta dolor y limitación funcional. Se indica fisioterapia de rehabilitación.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Electrocardiograma (ECG): Presencia de extrasístoles ventriculares aisladas.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Ecocardiograma: Fracción de eyección del ventrículo izquierdo conservada.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Prueba de esfuerzo cardiopulmonar: Limitación ventilatoria al ejercicio.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Potenciales evocados auditivos: Normales.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Electromiografía (EMG): Signos de radiculopatía cervical.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Hematología: Presencia de anemia microcítica.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Bioquímica: Bilirrubina total elevada.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Marcadores tumorales: CA 125 elevado.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Gasometría arterial: Hipoxemia leve.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Cultivo de orina: Positivo para Escherichia coli.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Resonancia magnética de columna lumbar: Hernia discal L4-L5.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Tomografía computarizada de tórax con contraste: Presencia de nódulo pulmonar solitario.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Ecografía doppler venosa de miembros inferiores: Trombosis venosa profunda en vena femoral.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Radiografía de abdomen: Presencia de niveles hidroaéreos.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Densitometría ósea: Osteopenia en cuello femoral.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Metformina 850 mg, una vez al día con la cena.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Atorvastatina 20 mg, una vez al día por la noche.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Hidroclorotiazida 25 mg, una vez al día por la mañana.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Salbutamol inhalador, 2 inhalaciones cada 6 horas según necesidad.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Prednisona 5 mg, una vez al día durante 5 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Paciente masculino de 70 años con antecedentes de fibrilación auricular. Presenta disnea y palpitaciones. Se realiza electrocardiograma y ecocardiograma.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 25 años con diagnóstico de lupus eritematoso sistémico. Refiere artralgias y eritema malar. Se ajusta tratamiento inmunosupresor.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente de 48 años con obesidad y síndrome metabólico. Presenta elevación de la presión arterial y dislipidemia. Se indica dieta y ejercicio.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente femenina de 60 años con antecedentes de cáncer de mama. Se realiza seguimiento oncológico con estudios de imagen y marcadores tumorales.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Paciente de 35 años con antecedente de traumatismo craneoencefálico. Presenta cefalea persistente y dificultad para concentrarse. Se indica evaluación neurológica.",
+        "categoria": "historia médica"
+    },
+    {
+        "texto": "Monitorización ambulatoria de la presión arterial (MAPA): Patrón de dipping conservado.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Estudio polisomnográfico: Apnea obstructiva del sueño moderada.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Test de la marcha de 6 minutos: Disminución de la distancia recorrida.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Evaluación neuropsicológica: Alteraciones en la memoria y la atención.",
+        "categoria": "exámenes médicos"
+    },
+    {
+        "texto": "Biometría hemática: Plaquetas bajas (trombocitopenia).",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Química clínica: Enzimas hepáticas elevadas (AST, ALT, GGT).",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Electrolitos séricos: Hiponatremia (sodio bajo).",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Proteínas séricas: Albúmina baja (hipoalbuminemia).",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Gasometría venosa: Acidosis metabólica.",
+        "categoria": "exámenes de laboratorio"
+    },
+    {
+        "texto": "Tomografía por emisión de positrones (PET): Captación patológica en ganglios linfáticos.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Angiografía por resonancia magnética: Estenosis de arteria carótida interna.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Gammagrafía ósea: Metástasis óseas.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Histerosonografía: Pólipo endometrial.",
+        "categoria": "exámenes por imágenes"
+    },
+    {
+        "texto": "Ciprofloxacino 500 mg, cada 12 horas durante 7 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Claritromicina 500 mg, cada 12 horas por 10 días.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Fluoxetina 20 mg, una vez al día por la mañana.",
+        "categoria": "receta médica"
+    },
+    {
+        "texto": "Tramadol 50 mg, cada 8 horas según necesidad para el dolor.",
+        "categoria": "receta médica"
+    }
+]

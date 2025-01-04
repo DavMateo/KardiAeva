@@ -1,6 +1,16 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,venv,dotenv,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,venv,dotenv,visualstudiocode
 
+
+### json configuración DB ###
+db_config.json
+
+### Uso de wandb para entrenamientos IA ###
+wandb/
+training.log
+models/best_model
+
+
 ### dotenv ###
 .env
 

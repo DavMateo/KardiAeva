@@ -138,3 +138,47 @@
         }
     }
 }
+
+
+
+/* LOGIN PAGE */
+@media screen and (min-width: 1150px) {
+    .container {
+        margin-inline: auto;
+    }
+
+    .login__area {
+        width: 460px;
+        margin: initial;
+    }
+
+    .login__access,
+    .login__register {
+        width: 600px;
+    }
+
+    .login__title {
+        text-align: initial;
+        margin-bottom: 3rem;
+    }
+
+    .login__button {
+        margin-bottom: 3rem;
+    }
+
+    .login__group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .login__blob {
+        display: block;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .login__img {
+        transform: translate(0rem, 0rem);
+    }
+}
