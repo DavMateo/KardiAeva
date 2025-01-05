@@ -20,6 +20,22 @@
             <div class="credencialesMysql">
                 <form class="credencialesMysql__formulario" id="credMysql">
                     <div class="formulario__titulo">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            stroke-width="2" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            class="lucide lucide-database h-6 w-6 text-blue-500 mr-2"
+                        >
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                            <path d="M3 12A9 3 0 0 0 21 12"></path>
+                        </svg>
                         <legend>Credenciales MySQL</legend>
                     </div>
 
@@ -53,6 +69,22 @@
             <div class="informacionPersonal">
                 <form class="informacionPersonal__formulario" id="infoPersona">
                     <div class="formulario__titulo">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            stroke-width="2" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            class="lucide lucide-circle-user h-6 w-6 text-blue-500 mr-2"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="10" r="3"></circle>
+                            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path>
+                        </svg>
                         <legend>Información Personal</legend>
                     </div>
 
@@ -77,9 +109,34 @@
                             <input type="text" name="pisoOrApt" id="pisoOrApt" required />
                         </div>
 
-                        <div class="residencia__codigoPostal">
-                            <label for="codigoPostal">Código Postal</label>
-                            <input type="text" name="codigoPostal" id="codigoPostal" />
+                        <div class="residencia__pais ui-wrapper">
+                            <input checked="" id="Colombia" name="flag" type="radio">
+                            <input id="Filipinas" name="flag" type="radio">
+                            <input id="Indonesia" name="flag" type="radio">
+                            <input id="Espanya" name="flag" type="radio">
+                            <input id="Polonia" name="flag" type="radio">
+                            <input id="EstadosUnidos" name="flag" type="radio">
+                            <input class="pais__dropdownCheckbox" name="dropdown" id="dropdown" type="checkbox">
+                            <label class="pais__dropdownContainer" for="dropdown"></label>
+                            <div class="pais__contenidoInput">
+                                <legend>
+                                <label for="phonenumber">País de residencia</label>
+                                </legend>
+                                <div class="contenidoInput__textfield">
+                                    <input pattern="\d+" maxlength="11" id="phonenumber" class="textfield__phoneNumber" type="text" readonly />
+                                    <span class="textfield__invalidMsg">Esto no es un país válido</span>
+                                </div>
+                            </div>
+                            <div class="pais__selector">
+                                <ul>
+                                    <li class="Colombia"><label for="Colombia"><span>🇨🇴</span>Colombia (+57)</label></li>
+                                    <li class="Filipinas"><label for="Filipinas"><span>🇵🇭</span>Filipinas (+63)</label></li>
+                                    <li class="Indonesia"><label for="Indonesia"><span>🇮🇩</span>Indonesia (+62)</label></li>
+                                    <li class="Espanya"><label for="Espanya"><span>🇪🇸</span>Espanya (+34)</label></li>
+                                    <li class="Polonia"><label for="Polonia"><span>🇵🇱</span>Polonia (+48)</label></li>
+                                    <li class="EstadosUnidos"><label for="EstadosUnidos"><span>🇺🇸</span>Estados Unidos (+1)</label></li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="residencia__indicacionesAdicionales">
@@ -94,10 +151,30 @@
                     </div>
 
                     <div class="formulario__genero">
-                        <label for="genero">Género</label>
-                        <select name="genero" id="genero" required>
-                            <option value="hombre">Hombre</option>
-                            <option value="mujer">Mujer</option>
+                        <svg
+                            y="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            x="0"
+                            width="100"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="xMidYMid meet"
+                            height="100"
+                            class="genero__svg"
+                        >
+                            <path
+                                stroke-width="4"
+                                stroke-linejoin="round"
+                                stroke-linecap="round"
+                                fill="none"
+                                d="M60.7,53.6,50,64.3m0,0L39.3,53.6M50,64.3V35.7m0,46.4A32.1,32.1,0,1,1,82.1,50,32.1,32.1,0,0,1,50,82.1Z"
+                                class="svg-stroke-primary"
+                            >
+                            </path>
+                        </svg>
+
+                        <select class="genero__selector">
+                            <option>Hombre</option>
+                            <option>Mujer</option>
                         </select>
                     </div>
 
@@ -120,12 +197,30 @@
                         <label for="nickname">Nickname</label>
                         <input type="text" name="nickname" id="nickname" required />
                     </div>
-
-                    <div class="formulario__btns">
-                        <button class="btns__guardar" type="submit">Guardar información</button>
-                        <button class="btns__rehacer" type="reset">Rehacer</button>
-                    </div>
                 </form>
+            </div>
+
+            <div class="principal__btns">
+                <button class="btns__guardar" type="submit">
+                    <span class="guardar__texto1">Guardar info</span>
+                    <span class="guardar__texto2">¡Guardado!</span>
+                    <span class="guardar__contenedorCargar">
+                        <span class="contenedorCargar__loader"></span>
+                    </span>
+                </button>
+                <button class="btns__rehacer" type="reset">
+                    <span class="rehacer__texto">Limpiar</span>
+                    <span class="rehacer__icono">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                        </svg>
+                    </span>
+                </button>
             </div>
         </main>
     </body>

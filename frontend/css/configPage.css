@@ -1,2 +1,116 @@
 @import url('./../variables.css');
 @import url('./../essentials.css');
+@import url('./models/configPage/principal.css');
+@import url('./responsive/medium_mobile.css');
+@import url('./responsive/standar_tablet.css');
+@import url('./responsive/laptop_device.css');
+@import url('./responsive/desktop_device.css');
+
+
+@media (min-width: 375px) and (max-width: 1440px) {
+    & .principal {
+        & .principal__btns {
+            & .btns__rehacer {
+                position: relative;
+        
+                & .rehacer__icono {
+                    transform: translateX(0);
+                    height: 1.6rem;
+                }
+        
+                &:hover {
+                    & .rehacer__icono {
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    & .principal {
+        & .principal__btns {
+            & .btns__guardar, .btns__rehacer {
+                width: var(--calc_widthBtns);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    & .principal {
+        & .principal__btns {
+            & .btns__guardar, .btns__rehacer {
+                width: var(--calc_widthBtns);
+                height: 3.5rem;
+                font-size: calc(var(--sz_letraSemigrande) - 1);
+            }
+
+            & .btns__rehacer {
+                font-size: var(--sz_letraSemigrande);
+
+                & .rehacer__icono {
+                    right: 10px;
+
+                    & svg {
+                        width: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    & .principal {
+        display: grid;
+        grid-template-columns: repeat(2, calc((100% / 2) - 1rem));
+        grid-template-rows: repeat(12, auto);
+        overflow-x: hidden;
+
+        & .credencialesMysql {
+            grid-area: mysql;
+        }
+    
+        & .informacionPersonal {
+            grid-area: personal;
+        }
+
+        & .principal__btns {
+            display: flex;
+            grid-area: btns;
+            align-items: flex-end;
+            padding: 0;
+
+            & .btns__rehacer {
+                position: relative;
+
+                &:hover {
+                    & .rehacer__icono {
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1441px) {
+    & .principal {
+        & .principal__btns {
+            & .btns__rehacer {
+                & .rehacer__icono {
+                    transform: translateX(0);
+                    height: 1.6rem;
+                }
+            }
+        }
+    }
+}

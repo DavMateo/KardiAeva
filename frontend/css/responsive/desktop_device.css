@@ -3,6 +3,9 @@
 @import url('./../models/variables.css');
 @import url('./../models/essentials.css');
 
+
+
+/* LANDING PAGE */
 @media  (min-width: 1025px) {
     /* Encabezado */
     .encabezado {
@@ -180,5 +183,86 @@
 
     .login__img {
         transform: translate(0rem, 0rem);
+    }
+}
+
+
+
+/* SETTINGS PAGE */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    & .principal {
+        grid-template-areas: 
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "btns personal"
+            "btns personal"
+        ;
+        padding-bottom: 4rem;
+
+        & .principal__btns {
+            & .btns__guardar {
+                & .guardar__contenedorCargar {
+                    & .contenedorCargar__loader {
+                        transform: translateX(-21em);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1441px) {
+    & .principal {
+        grid-template-areas: 
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "btns personal"
+            "btns personal"
+            "btns personal"
+        ;
+        padding-bottom: 5rem;
+
+        & .principal__btns {
+            & .btns__guardar, .btns__rehacer {
+                width: var(--calc_widthBtns);
+                height: 4.5rem;
+                font-size: calc(var(--sz_letraGrande) - 1);
+            }
+
+            & .btns__guardar {
+                & .guardar__contenedorCargar {
+                    & .contenedorCargar__loader {
+                        transform: translateX(-30em);
+                    }
+                }
+            }
+
+            & .btns__rehacer {
+                font-size: var(--sz_letraGrande);
+
+                & .rehacer__icono {
+                    right: 10px;
+
+                    & svg {
+                        width: 18px;
+                    }
+                }
+            }
+        }
     }
 }

@@ -3,6 +3,9 @@
 @import url('./../models/variables.css');
 @import url('./../models/essentials.css');
 
+
+
+/* LANDING PAGE */
 @media (max-width: 900px) and (min-width: 769px) {
     /* Encabezado */
     .encabezado {
@@ -252,6 +255,39 @@
                     &::after {
                         width: 37.5rem;
                         font-size: calc(var(--sz_letraTitulo) + 1rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* SETTINGS PAGE */
+@media (min-width: 768px) and (max-width: 1024px) {
+    & .principal {
+        grid-template-areas: 
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "mysql personal"
+            "btns personal"
+        ;
+        padding-bottom: 3rem;
+
+        & .principal__btns {
+            & .btns__guardar {
+                & .guardar__contenedorCargar {
+                    & .contenedorCargar__loader {
+                        transform: translateX(-14em);
                     }
                 }
             }

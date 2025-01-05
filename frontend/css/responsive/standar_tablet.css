@@ -3,6 +3,8 @@
 @import url('./../models/variables.css');
 @import url('./../models/essentials.css');
 
+
+/* LANDING PAGE */
 @media (max-width: 540px) and (min-width: 481px) {
     /* Encabezado */
     .encabezado {
@@ -366,6 +368,40 @@
                     &::after {
                         width: 23.9rem;
                         font-size: calc(var(--sz_letraSubtitulo) + 6px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* SETTINGS PAGE */
+@media (min-width:481px) and (max-width: 767px) {
+    & .principal {
+        & .principal__btns {
+            & .btns__guardar, .btns__rehacer {
+                height: 3rem;
+            }
+
+            & .btns__guardar {
+                & .guardar__contenedorCargar {
+                    & .contenedorCargar__loader {
+                        transform: translateX(-17em);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+    & .principal {
+        & .principal__btns {
+            & .btns__guardar {
+                & .guardar__contenedorCargar {
+                    & .contenedorCargar__loader {
+                        transform: translateX(-26em);
                     }
                 }
             }

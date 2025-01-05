@@ -34,7 +34,7 @@ app.mount("/static", StaticFiles(directory="frontend"), name="frontend")
 # Ruta principal para la interfaz gráfica
 @app.get("/")
 async def server_index():
-    return FileResponse("frontend/templates/login.html")
+    return FileResponse("frontend/templates/configuracion.html")
 
 
 # Incluyendo las respectivas rutas del servidor

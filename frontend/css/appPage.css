@@ -1,0 +1,5 @@
+@import url('./../variables.css');
+@import url('./../essentials.css');
+@import url('./models/appPage/encabezado.css');
+@import url('./models/appPage/principal.css');
+@import url('./models/appPage/pieDePagina.css');

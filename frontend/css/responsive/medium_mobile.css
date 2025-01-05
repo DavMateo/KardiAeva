@@ -110,3 +110,20 @@
         height: 760px;
     }
 }
+
+
+
+/* SETTINGS PAGE */
+@media (min-width: 375px) and (max-width: 480px) {
+    & .principal {
+        & .principal__btns {
+            & .btns__guardar {
+                & .guardar__contenedorCargar {
+                    & .contenedorCargar__loader {
+                        transform: translateX(-15em);
+                    }
+                }
+            }
+        }
+    }
+}

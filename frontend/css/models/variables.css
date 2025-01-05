@@ -73,4 +73,19 @@
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --tiny-font-size: .75rem;
+
+
+    /* Variables para la página de configuración */
+    --border_inputColor: rgba(209, 213, 219, 1.0);
+    --width: 250px;
+    --height: 50px;
+    --background: #fff;
+    --text-color: rgb(73, 73, 73);
+    --border-color: rgb(185, 184, 184);
+    --border-focus-color: rgb(0, 110, 255);
+    --shadow-color: rgba(34, 60, 80, 0.2);
+    --shadow-focus-color: rgba(0, 110, 255, 0.2);
+    --dropdown-button-color: #e6e6e6;
+    --dropdown-button-hover-color: #dad9d9;
+    --calc_widthBtns: calc((100% / 2) - 1rem);
 }
