@@ -9,6 +9,7 @@ db_config.json
 wandb/
 training.log
 models/best_model
+backend/models/wandb
 
 
 ### dotenv ###

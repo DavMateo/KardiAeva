@@ -263,7 +263,6 @@
 }
 
 
-
 /* SETTINGS PAGE */
 @media (min-width: 768px) and (max-width: 1024px) {
     & .principal {
@@ -292,5 +291,41 @@
                 }
             }
         }
+    }
+}
+
+
+/* PRINCIPAL APP KARDIAEVA */
+@media (min-width: 1024px) {
+    .header__nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .header__nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--color-text);
+        font-size: 0.875rem;
+    }
+
+    .header__nav-link--active {
+        color: var(--color-primary);
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main {
+        padding: 2rem 4rem;
     }
 }

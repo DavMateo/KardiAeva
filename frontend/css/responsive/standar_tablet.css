@@ -408,3 +408,21 @@
         }
     }
 }
+
+
+/* PRINCIPAL APP KARDIAEVA */
+@media (min-width: 768px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .activity__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .header__nav {
+        display: none;
+    }
+}

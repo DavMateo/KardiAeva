@@ -10,3 +10,6 @@ scikit-learn  "Entrenar IA
 numpy  "Entrenar IA
 tqdm  "Entrenar IA
 wandb  "Entrenar IA
+evaluate  "Entrenar IA
+scipy  "Entrenar IA
+'accelerate>=0.26.0'  "Entrenar IA

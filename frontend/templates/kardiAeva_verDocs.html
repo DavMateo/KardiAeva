@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/appPage_verDocumentos.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/icon/favicon-16x16.png" />
+    <link rel="manifest" href="/static/assets/icon/site.webmanifest" />
+    <script src="/static/js/app.js" type="module" defer></script>
+    <title>KardiAeva - Explorar Documentos</title>
+    <style>
+        :root {
+            --color-primary: #6366f1;
+            --color-primary-light: #818cf8;
+            --color-background: #f8fafc;
+            --color-surface: #ffffff;
+            --color-text: #1e293b;
+            --color-text-light: #64748b;
+            --color-border: #e2e8f0;
+            --color-white: #FFFFFF;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+        }
+
+        /* Reset y estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.5;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--color-white);
+            padding: 1rem;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header__logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header__logo {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        .header__title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .header__nav {
+            display: none;
+        }
+
+        .header__user {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .header__user-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Explorer */
+        .explorer {
+            padding: 1.5rem 1rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .explorer__title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .explorer__controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Search */
+        .search {
+            position: relative;
+            width: 100%;
+        }
+
+        .search__icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke: var(--color-text-light);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .search__input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            background-color: var(--color-white);
+        }
+
+        .search__input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px var(--color-primary-light);
+        }
+
+        /* Filter */
+        .filter {
+            position: relative;
+        }
+
+        .filter__button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            background-color: var(--color-white);
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--color-text);
+        }
+
+        .filter__icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Document Cards */
+        .documents__list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .documents__list--cards {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .document-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .document-card__title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .document-card__info {
+            display: grid;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+
+        .document-card__actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+
+        .document-card__action {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+        }
+
+        .document-card__action svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke: var(--color-text-light);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .document-card__action:hover {
+            background-color: var(--color-background);
+        }
+
+
+        .documents__table-wrapper {
+            display: none;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .documents__table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+        }
+
+        .documents__table th,
+        .documents__table td {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .documents__table th {
+            background-color: #E2E8F0;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .documents__table th:first-child {
+            border-top-left-radius: var(--radius-lg);
+        }
+
+        .documents__table th:last-child {
+            border-top-right-radius: var(--radius-lg);
+        }
+
+        .documents__table td {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .documents__table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .documents__table tr:last-child td:first-child {
+            border-bottom-left-radius: var(--radius-lg);
+        }
+
+        .documents__table tr:last-child td:last-child {
+            border-bottom-right-radius: var(--radius-lg);
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: var(--color-surface);
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            bottom: 0;
+            box-shadow: 0 -1px 2px 0 rgb(0 0 0 / 0.05);
+        }
+
+        .nav__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            text-decoration: none;
+            color: var(--color-text-secondary);
+        }
+
+        .nav__item--active {
+            color: var(--color-primary);
+        }
+
+        .nav__icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .nav__text {
+            font-size: 0.75rem;
+        }
+
+        .nav__fab {
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: var(--color-primary);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s ease;
+        }
+
+        .nav__fab:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .nav__fab:active {
+            transform: translateX(-50%) scale(0.95);
+        }
+
+
+        /* Media Queries */
+        @media (min-width: 375px) {
+            .document-card__info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 480px) {
+            .explorer__controls {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .search {
+                flex: 1;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .documents__list {
+                display: table;
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .document-card {
+                display: table-row;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .document-card>* {
+                display: table-cell;
+                padding: 1rem;
+                border-bottom: 1px solid var(--color-border);
+                vertical-align: middle;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 2rem;
+            }
+
+            .header__nav {
+                display: block;
+            }
+
+            .header__nav-list {
+                display: flex;
+                gap: 2rem;
+                list-style: none;
+            }
+
+            .header__nav-link {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                text-decoration: none;
+                color: var(--color-text);
+                font-weight: 500;
+            }
+
+            .header__nav-icon {
+                width: 1.25rem;
+                height: 1.25rem;
+                stroke: currentColor;
+                stroke-width: 2;
+                fill: none;
+            }
+
+            .explorer {
+                padding: 2rem;
+            }
+
+            .documents__cards {
+                display: none;
+            }
+
+            .documents__list--cards {
+                display: none;
+            }
+
+            .documents__table {
+                display: table;
+                width: 100%;
+                border-collapse: collapse;
+                background-color: var(--color-white);
+                border-radius: var(--radius-lg);
+                overflow: hidden;
+            }
+
+            .documents__table th,
+            .documents__table td {
+                padding: 1rem;
+                text-align: left;
+                border-bottom: 1px solid var(--color-border);
+            }
+
+            .documents__table th {
+                background-color: #F1F1F1;
+                font-weight: 600;
+                color: var(--color-text);
+            }
+
+            .documents__table td {
+                color: var(--color-text);
+            }
+
+            .documents__table tr:last-child td {
+                border-bottom: none;
+            }
+
+            .documents__table .document-card__actions {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-start;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1368px) {
+            .explorer {
+                padding: 3rem;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .explorer {
+                padding: 4rem;
+            }
+        }
+
+        @media (max-width:1023px) {
+            .documents__table {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-container">
+            <img src="logo.svg" alt="KardiAeva Logo" class="header__logo">
+            <h1 class="header__title">KardiAeva</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link header__nav-link--active">
+                        <svg class="header__nav-icon" viewBox="0 0 24 24">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Inicio
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">
+                        <svg class="header__nav-icon" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        Subir archivos
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">
+                        <svg class="header__nav-icon" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Explorar documentos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__user">
+            <img src="user-avatar.jpg" alt="Avatar de usuario" class="header__user-avatar">
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="explorer">
+            <h2 class="explorer__title">Explorar Documentos</h2>
+
+            <div class="explorer__controls">
+                <div class="search">
+                    <svg class="search__icon" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="search__input" placeholder="Buscar documentos...">
+                </div>
+
+                <div class="filter">
+                    <button class="filter__button" id="filterButton">
+                        <svg class="filter__icon" viewBox="0 0 24 24">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                        Filtros
+                    </button>
+                    <div class="filter__dropdown" id="filterDropdown">
+                        <!-- Contenido del dropdown -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="documents">
+                <div class="documents__list documents__list--cards">
+                    <article class="document-card">
+                        <h3 class="document-card__title">Historia_Clinica_2024.pdf</h3>
+                        <div class="document-card__info">
+                            <span class="document-card__date">2024-02-15</span>
+                            <span class="document-card__category">Historia Clínica</span>
+                            <span class="document-card__specialty">Cardiología</span>
+                        </div>
+                        <div class="document-card__actions">
+                            <button class="document-card__action" title="Ver">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="document-card__action" title="Editar">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                </svg>
+                            </button>
+                            <button class="document-card__action" title="Eliminar">
+                                <svg viewBox="0 0 24 24">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Más document-cards aquí -->
+                </div>
+
+                <table class="documents__table">
+                    <thead>
+                        <tr>
+                            <th>NOMBRE</th>
+                            <th>CATEGORÍA</th>
+                            <th>ESPECIALIDAD</th>
+                            <th>FECHA</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Historia_Clinica_2024.pdf</td>
+                            <td>Historia Clínica</td>
+                            <td>Cardiología</td>
+                            <td>2024-02-15</td>
+                            <td>
+                                <div class="document-card__actions">
+                                    <button class="document-card__action" title="Ver">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </button>
+                                    <button class="document-card__action" title="Editar">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="document-card__action" title="Eliminar">
+                                        <svg viewBox="0 0 24 24">
+                                            <polyline points="3 6 5 6 21 6"></polyline>
+                                            <path
+                                                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Analisis_Sangre.pdf</td>
+                            <td>Análisis</td>
+                            <td>Hematología</td>
+                            <td>2024-02-14</td>
+                            <td>
+                                <div class="document-card__actions">
+                                    <button class="document-card__action" title="Ver">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </button>
+                                    <button class="document-card__action" title="Editar">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="document-card__action" title="Eliminar">
+                                        <svg viewBox="0 0 24 24">
+                                            <polyline points="3 6 5 6 21 6"></polyline>
+                                            <path
+                                                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Receta_Medicamentos.pdf</td>
+                            <td>Receta Médica</td>
+                            <td>Neurología</td>
+                            <td>2024-02-13</td>
+                            <td>
+                                <div class="document-card__actions">
+                                    <button class="document-card__action" title="Ver">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </button>
+                                    <button class="document-card__action" title="Editar">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="document-card__action" title="Eliminar">
+                                        <svg viewBox="0 0 24 24">
+                                            <polyline points="3 6 5 6 21 6"></polyline>
+                                            <path
+                                                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <nav class="nav">
+        <a href="#" class="nav__item nav__item--active">
+            <img src="/placeholder.svg" alt="" class="nav__icon">
+            <span class="nav__text">Principal</span>
+        </a>
+        <button class="nav__fab">
+            <span class="nav__fab-icon">+</span>
+        </button>
+        <a href="#" class="nav__item">
+            <img src="/placeholder.svg" alt="" class="nav__icon">
+            <span class="nav__text">Buscar</span>
+        </a>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Referencias a elementos del DOM
+            const searchInput = document.querySelector('.search__input');
+            const filterButton = document.getElementById('filterButton');
+            const filterDropdown = document.getElementById('filterDropdown');
+            const documentsListCards = document.querySelector('.documents__list--cards');
+            const documentsTable = document.querySelector('.documents__table tbody');
+
+            // Estado de la aplicación
+            let documents = [
+                {
+                    id: 1,
+                    name: 'Historia_Clinica_2024.pdf',
+                    date: '2024-02-15',
+                    category: 'Historia Clínica',
+                    specialty: 'Cardiología'
+                },
+                {
+                    id: 2,
+                    name: 'Analisis_Sangre.pdf',
+                    date: '2024-02-14',
+                    category: 'Análisis',
+                    specialty: 'Hematología'
+                },
+                {
+                    id: 3,
+                    name: 'Receta_Medicamentos.pdf',
+                    date: '2024-02-13',
+                    category: 'Receta Médica',
+                    specialty: 'Neurología'
+                }
+            ];
+
+            // Funcionalidad de búsqueda
+            searchInput.addEventListener('input', function (e) {
+                const searchTerm = e.target.value.toLowerCase();
+                filterDocuments(searchTerm);
+            });
+
+            // Toggle del dropdown de filtros
+            filterButton.addEventListener('click', function () {
+                filterDropdown.classList.toggle('filter__dropdown--active');
+            });
+
+            // Cerrar dropdown al hacer click fuera
+            document.addEventListener('click', function (e) {
+                if (!filterButton.contains(e.target) && !filterDropdown.contains(e.target)) {
+                    filterDropdown.classList.remove('filter__dropdown--active');
+                }
+            });
+
+            // Función para filtrar documentos
+            function filterDocuments(searchTerm) {
+                const filteredDocs = documents.filter(doc =>
+                    doc.name.toLowerCase().includes(searchTerm) ||
+                    doc.category.toLowerCase().includes(searchTerm) ||
+                    doc.specialty.toLowerCase().includes(searchTerm)
+                );
+                renderDocuments(filteredDocs);
+            }
+
+            // Función para renderizar documentos
+            function renderDocuments(docs) {
+                // Renderizar vista de tarjetas
+                documentsListCards.innerHTML = docs.map(doc => `
+                    <article class="document-card">
+                        <h3 class="document-card__title">${doc.name}</h3>
+                        <div class="document-card__info">
+                            <span class="document-card__date">${doc.date}</span>
+                            <span class="document-card__category">${doc.category}</span>
+                            <span class="document-card__specialty">${doc.specialty}</span>
+                        </div>
+                        <div class="document-card__actions">
+                            <button class="document-card__action" title="Ver">
+                                <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                            <button class="document-card__action" title="Editar">
+                                <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="document-card__action" title="Eliminar">
+                                <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+                `).join('');
+
+                // Renderizar vista de tabla
+                documentsTable.innerHTML = docs.map(doc => `
+                    <tr>
+                        <td>${doc.name}</td>
+                        <td>${doc.category}</td>
+                        <td>${doc.specialty}</td>
+                        <td>${doc.date}</td>
+                        <td>
+                            <div class="document-card__actions">
+                                <button class="document-card__action" title="Ver">
+                                    <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                                <button class="document-card__action" title="Editar">
+                                    <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                </button>
+                                <button class="document-card__action" title="Eliminar">
+                                    <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+
+            // Inicializar la vista
+            renderDocuments(documents);
+        });
+    </script>
+</body>
+
+</html>

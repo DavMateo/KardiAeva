@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/appPage_principal.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/icon/favicon-16x16.png" />
+    <link rel="manifest" href="/static/assets/icon/site.webmanifest" />
+    <script src="/static/js/app.js" type="module" defer></script>
+    <title>KardiAeva - Panel de Control</title>
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__logo-container">
+                <img src="logo.svg" alt="KardiAeva" class="header__logo">
+                <h1 class="header__title">KardiAeva</h1>
+            </div>
+
+            <nav class="header__nav">
+                <a href="#" class="header__nav-link header__nav-link--active">
+                    <i class="header__nav-icon header__nav-icon--home"></i>
+                    Inicio
+                </a>
+                <a href="#" class="header__nav-link">
+                    <i class="header__nav-icon header__nav-icon--upload"></i>
+                    Subir archivos
+                </a>
+                <a href="#" class="header__nav-link">
+                    <i class="header__nav-icon header__nav-icon--explore"></i>
+                    Explorar documentos
+                </a>
+            </nav>
+
+            <div class="header__profile">
+                <img src="profile.jpg" alt="Perfil" class="header__profile-image">
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <h2 class="main__title">Panel de control</h2>
+
+            <!-- Stats Grid -->
+            <div class="stats">
+                <!-- Total Documents -->
+                <div class="stats__card">
+                    <div class="stats__icon stats__icon--document"></div>
+                    <div class="stats__content">
+                        <h3 class="stats__label">Total Documentos</h3>
+                        <p class="stats__number">156</p>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="stats__card">
+                    <div class="stats__icon stats__icon--folder"></div>
+                    <div class="stats__content">
+                        <h3 class="stats__label">Categorias Principales</h3>
+                        <ul class="stats__list">
+                            <li class="stats__list-item">
+                                <span class="stats__list-label">Historia Clinica</span>
+                                <span class="stats__list-number">45</span>
+                            </li>
+                            <li class="stats__list-item">
+                                <span class="stats__list-label">Receta Médica</span>
+                                <span class="stats__list-number">78</span>
+                            </li>
+                            <li class="stats__list-item">
+                                <span class="stats__list-label">Análisis</span>
+                                <span class="stats__list-number">33</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Storage -->
+                <div class="stats__card">
+                    <div class="stats__icon stats__icon--storage"></div>
+                    <div class="stats__content">
+                        <h3 class="stats__label">Almacenamiento</h3>
+                        <div class="stats__storage">
+                            <div class="stats__storage-text">75% Usado</div>
+                            <div class="stats__storage-bar">
+                                <div class="stats__storage-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <section class="activity">
+                <h2 class="activity__title">Actividad Reciente</h2>
+                <div class="activity__grid">
+                    <!-- Left Column -->
+                    <div class="activity__column">
+                        <div class="activity__card">
+                            <div class="activity__icon"></div>
+                            <div class="activity__content">
+                                <h3 class="activity__document">Documento_1.pdf</h3>
+                                <p class="activity__time">Subido hace 1 hora</p>
+                            </div>
+                            <span class="activity__tag">HC</span>
+                        </div>
+                        <div class="activity__card">
+                            <div class="activity__icon"></div>
+                            <div class="activity__content">
+                                <h3 class="activity__document">Documento_2.pdf</h3>
+                                <p class="activity__time">Subido hace 5 horas</p>
+                            </div>
+                            <span class="activity__tag">RM</span>
+                        </div>
+                        <div class="activity__card">
+                            <div class="activity__icon"></div>
+                            <div class="activity__content">
+                                <h3 class="activity__document">Documento_3.pdf</h3>
+                                <p class="activity__time">Subido hace 8 horas</p>
+                            </div>
+                            <span class="activity__tag">ANS</span>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="activity__column">
+                        <div class="activity__card">
+                            <div class="activity__icon"></div>
+                            <div class="activity__content">
+                                <h3 class="activity__document">Documento_4.pdf</h3>
+                                <p class="activity__time">Subido hace 8 horas</p>
+                            </div>
+                            <span class="activity__tag">RM</span>
+                        </div>
+                        <div class="activity__card">
+                            <div class="activity__icon"></div>
+                            <div class="activity__content">
+                                <h3 class="activity__document">Documento_5.pdf</h3>
+                                <p class="activity__time">Subido hace 12 horas</p>
+                            </div>
+                            <span class="activity__tag">RM</span>
+                        </div>
+                        <div class="activity__card">
+                            <div class="activity__icon"></div>
+                            <div class="activity__content">
+                                <h3 class="activity__document">Documento_6.pdf</h3>
+                                <p class="activity__time">Subido hace 74 horas</p>
+                            </div>
+                            <span class="activity__tag">HC</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav">
+            <a href="#" class="nav__item nav__item--active">
+                <img src="/placeholder.svg" alt="" class="nav__icon">
+                <span class="nav__text">Principal</span>
+            </a>
+            <button class="nav__fab">
+                <span class="nav__fab-icon">+</span>
+            </button>
+            <a href="#" class="nav__item">
+                <img src="/placeholder.svg" alt="" class="nav__icon">
+                <span class="nav__text">Buscar</span>
+            </a>
+        </nav>
+    </div>
+
+
+    <script>
+        // Add mobile navigation active state handling
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileNavLinks = document.querySelectorAll('.nav-mobile__link');
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Remove active class from all links
+                    mobileNavLinks.forEach(l => l.classList.remove('nav-mobile__link--active'));
+                    // Add active class to clicked link
+                    link.classList.add('nav-mobile__link--active');
+                });
+            });
+
+            // Handle FAB button click
+            const fabButton = document.querySelector('.nav-mobile__fab');
+            if (fabButton) {
+                fabButton.addEventListener('click', () => {
+                    // Add your FAB button action here
+                    console.log('FAB button clicked');
+                });
+            }
+
+            // Handle desktop navigation
+            const desktopNavLinks = document.querySelectorAll('.header__nav-link');
+            desktopNavLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    desktopNavLinks.forEach(l => l.classList.remove('header__nav-link--active'));
+                    link.classList.add('header__nav-link--active');
+                });
+            });
+        });
+
+        // Add smooth transitions for storage bar updates
+        const updateStorageBar = (percentage) => {
+            const progressBar = document.querySelector('.stats__storage-progress');
+            if (progressBar) {
+                progressBar.style.width = `${percentage}%`;
+            }
+        };
+
+        // Example usage:
+        // updateStorageBar(75);
+    </script>
+</body>
+
+</html>
