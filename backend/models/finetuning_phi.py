@@ -156,7 +156,7 @@ class MetricsCallback(TrainerCallback):
 
 def main():
     # Configuración de CPU
-    torch.set_num_threads(4)
+    torch.set_num_threads(8)
     torch.set_default_tensor_type(torch.FloatTensor)
     
     # Configuración inicial
