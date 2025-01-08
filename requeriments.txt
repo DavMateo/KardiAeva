@@ -3,13 +3,16 @@ uvicorn
 sqlalchemy
 sqlalchemy-utils
 pymysql
-torch  "Entrenar IA
-transformers  "Entrenar IA
-datasets  "Entrenar IA
-scikit-learn  "Entrenar IA
-numpy  "Entrenar IA
-tqdm  "Entrenar IA
-wandb  "Entrenar IA
-evaluate  "Entrenar IA
-scipy  "Entrenar IA
-'accelerate>=0.26.0'  "Entrenar IA
+torch
+transformers
+datasets
+scikit-learn
+numpy
+tqdm
+wandb
+evaluate
+scipy
+accelerate>=0.26.0
+trl
+peft
+pandas
