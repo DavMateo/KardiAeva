@@ -1,5 +1,4 @@
 /* Responsive pantallas >769px y <=1024px */
-
 @import url('./../models/variables.css');
 @import url('./../models/essentials.css');
 
@@ -327,5 +326,138 @@
 @media (min-width: 1280px) {
     .main {
         padding: 2rem 4rem;
+    }
+}
+
+
+/* APP WEB KARDIAEVA - VER DOCUMENTOS */
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .header__nav {
+        display: block;
+    }
+
+    .header__nav-list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .header__nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--color-text);
+        font-weight: 500;
+    }
+
+    .header__nav-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        stroke: currentColor;
+        stroke-width: 2;
+        fill: none;
+    }
+
+    .explorer {
+        padding: 2rem;
+    }
+
+    .documents__cards {
+        display: none;
+    }
+
+    .documents__list--cards {
+        display: none;
+    }
+
+    .documents__table {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        background-color: var(--color-surface);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+    }
+
+    .documents__table th,
+    .documents__table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .documents__table th {
+        background-color: #F1F1F1;
+        font-weight: 600;
+        color: var(--color-text);
+    }
+
+    .documents__table td {
+        color: var(--color-text);
+    }
+
+    .documents__table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .documents__table .document-card__actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width:1023px) {
+    .documents__table {
+        display: none;
+    }
+}
+
+
+/* APP WEB KARDIAEVA - SUBIR DOCUMENTOS */
+@media (min-width: 1024px) {
+    .header__nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .header__nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--color-text);
+    }
+
+    .header__nav-link--active {
+        color: var(--color-primary);
+    }
+
+    .main {
+        padding: 2rem;
+    }
+
+    .upload-form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .upload-form__fields {
+        grid-column: 2 / span 2;
+    }
+
+    .nav {
+        display: none;
     }
 }

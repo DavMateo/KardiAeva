@@ -1,8 +1,9 @@
 /* Responsive pantallas >375px y <=480px */
-
 @import url('./../models/variables.css');
 @import url('./../models/essentials.css');
 
+
+/* LANDING PAGE */
 @media (max-width: 480px) and (min-width: 376px) {
     /* Encabezado */
     .encabezado {
@@ -153,10 +154,22 @@
 }
 
 
-
 /* PÁGINA PRINCIPAL DE LA APP KARDIAEVA */
 @media (min-width: 480px) {
     .main {
         padding: 2rem;
+    }
+}
+
+
+/* APP WEB KARDIAEVA - VER DOCUMENTOS */
+@media (min-width: 480px) {
+    .explorer__controls {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search {
+        flex: 1;
     }
 }

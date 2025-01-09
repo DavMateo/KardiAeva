@@ -305,6 +305,12 @@ class LoginRegisterComponent extends HTMLElement {
         const inputSurnames = container.querySelector("#surnames");
         const inputEmailCreate = container.querySelector("#emailCreate");
         const inputPasswordCreate = container.querySelector("#passwordCreate");
+        const btnLogin = container.querySelector('#btnLoginSubmit');   // Eliminar luego y hacerlo dinámico
+
+        // Eliminar luego y hacerlo más avanzado
+        btnLogin.addEventListener("click", () => {
+            location.href = "/static/templates/kardiAeva_principal.html";
+        })
 
         // Click en "Crea una cuenta"
         buttonRegister.addEventListener("click", () => {

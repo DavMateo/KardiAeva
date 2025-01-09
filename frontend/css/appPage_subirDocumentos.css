@@ -1,0 +1,10 @@
+@import url('./models/variables.css');
+@import url('./models/essentials.css');
+@import url('./models/appPage/normalizacion.css');
+@import url('./models/appPage/subirDocumentos.css');
+@import url('./models/appPage/encabezado.css');
+@import url('./models/appPage/pieDePagina.css');
+@import url('./animations/anim__appPageSubirDocs.css');
+@import url('./responsive/standar_tablet.css');
+@import url('./responsive/laptop_device.css');
+@import url('./responsive/desktop_device.css');

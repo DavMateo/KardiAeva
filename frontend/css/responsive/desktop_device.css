@@ -272,3 +272,31 @@
         padding: 3rem 6rem;
     }
 }
+
+
+/* APP WEB KARDIAEVA - VER DOCUMENTOS */
+@media (min-width: 1368px) {
+    .explorer {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .explorer {
+        padding: 4rem;
+    }
+}
+
+
+/* APP WEB KARDIAEVA - SUBIR DOCUMENTOS */
+@media (min-width: 1368px) {
+    .main {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .main {
+        max-width: 1600px;
+    }
+}

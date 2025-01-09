@@ -1,2 +1,140 @@
 @import url('./../variables.css');
 @import url('./../essentials.css');
+
+
+
+.main {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main__title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.stats {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stats__card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1rem;
+}
+
+.stats__icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+}
+
+.stats__content {
+    flex: 1;
+}
+
+.stats__label {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stats__number {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.stats__list {
+    list-style: none;
+}
+
+.stats__list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.stats__list-item:last-child {
+    border-bottom: none;
+}
+
+.stats__storage-text {
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.stats__storage-bar {
+    height: 0.5rem;
+    background-color: var(--color-background);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.stats__storage-progress {
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+}
+
+.activity__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.activity__card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+.activity__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-background);
+    border-radius: var(--radius-sm);
+}
+
+.activity__content {
+    flex: 1;
+}
+
+.activity__document {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.activity__time {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.activity__tag {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--color-background);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+}

@@ -1,2 +1,63 @@
 @import url('./../variables.css');
 @import url('./../essentials.css');
+
+.nav {
+    background-color: var(--color-surface);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 -1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: var(--color-text-secondary);
+}
+
+.nav__item--active {
+    color: var(--color-primary);
+}
+
+.nav__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.nav__text {
+    font-size: 0.75rem;
+}
+
+.nav__fab {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s ease;
+}
+
+.nav__fab:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.nav__fab:active {
+    transform: translateX(-50%) scale(0.95);
+}

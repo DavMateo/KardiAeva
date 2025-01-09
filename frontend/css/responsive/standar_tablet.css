@@ -426,3 +426,51 @@
         display: none;
     }
 }
+
+
+/* APP WEB KARDIAEVA - VER DOCUMENTOS */
+@media (min-width: 768px) {
+    .documents__list {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .document-card {
+        display: table-row;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .document-card>* {
+        display: table-cell;
+        padding: 1rem;
+        border-bottom: 1px solid var(--color-border);
+        vertical-align: middle;
+    }
+}
+
+
+/* APP WEB KARDIAEVA - SUBIR DOCUMENTOS */
+@media (min-width: 768px) {
+    .header__nav {
+        display: none;
+    }
+
+    .bottom-nav {
+        display: none;
+    }
+
+    .upload-form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .upload-form__dropzone {
+        grid-column: 1;
+    }
+
+    .upload-form__fields {
+        grid-column: 2;
+    }
+}

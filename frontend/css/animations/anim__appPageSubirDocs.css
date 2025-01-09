@@ -1,0 +1,272 @@
+@import url('./../models/variables.css');
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Global Animation Styles */
+.app {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Enhanced Navigation Animations */
+.header__nav-link {
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.header__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.2s ease;
+}
+
+.header__nav-link:hover::after {
+    width: 100%;
+}
+
+/* Profile Image Animation */
+.header__profile-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+/* Enhanced Form Animations */
+.upload-form__dropzone {
+    transition: all 0.3s ease;
+    animation: scaleIn 0.3s ease;
+}
+
+.upload-form__dropzone:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.upload-form__dropzone.drag-over {
+    transform: scale(1.02);
+    border-color: var(--color-primary);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.upload-form__input,
+.upload-form__select-input,
+.upload-form__textarea {
+    transition: all 0.2s ease;
+}
+
+.upload-form__input:focus,
+.upload-form__select-input:focus,
+.upload-form__textarea:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+/* Submit Button Animation */
+.upload-form__submit {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.upload-form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.upload-form__submit:active {
+    transform: translateY(0);
+}
+
+.upload-form__submit::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.upload-form__submit:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Loading State Animation */
+.upload-form__submit.loading {
+    background: linear-gradient(90deg,
+            var(--color-primary) 25%,
+            rgba(37, 99, 235, 0.8) 50%,
+            var(--color-primary) 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+/* Bottom Navigation Animations */
+.bottom-nav__link {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.bottom-nav__link:hover {
+    transform: translateY(-2px);
+    color: var(--color-primary);
+}
+
+.bottom-nav__link:active {
+    transform: translateY(0);
+}
+
+.bottom-nav__icon {
+    transition: transform 0.2s ease;
+}
+
+.bottom-nav__link:hover .bottom-nav__icon {
+    transform: scale(1.1);
+}
+
+/* Form Field Animations */
+.upload-form__field {
+    animation: fadeIn 0.3s ease-out;
+    animation-fill-mode: both;
+}
+
+.upload-form__field:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.upload-form__field:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.upload-form__field:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.upload-form__field:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Error State Animations */
+.upload-form__input.error,
+.upload-form__select-input.error,
+.upload-form__textarea.error {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Success State Animations */
+.upload-form__field.success::after {
+    content: '✓';
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #10B981;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Counter Animation */
+.upload-form__counter {
+    transition: color 0.2s ease;
+}
+
+.upload-form__counter.near-limit {
+    color: #F59E0B;
+}
+
+.upload-form__counter.at-limit {
+    color: #EF4444;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Hover Effects */
+@media (hover: hover) {
+    .upload-form__submit:hover {
+        background-color: #1D4ED8;
+    }
+
+    .header__nav-link:hover {
+        color: var(--color-primary);
+    }
+}
+
+/* Loading Placeholder Animation */
+.loading-placeholder {
+    background: linear-gradient(90deg,
+            var(--color-border) 25%,
+            #F3F4F6 50%,
+            var(--color-border) 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}

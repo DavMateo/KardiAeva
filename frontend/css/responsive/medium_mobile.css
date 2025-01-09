@@ -4,6 +4,7 @@
 @import url('./../models/essentials.css');
 
 
+/* LANDING PAGE */
 @media (max-width: 375px) and (min-width: 321px) {
     /* Encabezado */
     .encabezado {
@@ -96,7 +97,6 @@
 }
 
 
-
 /* LOGIN PAGE */
 @media screen and (min-width: 540px) {
     .login__area {
@@ -112,7 +112,6 @@
 }
 
 
-
 /* SETTINGS PAGE */
 @media (min-width: 375px) and (max-width: 480px) {
     & .principal {
@@ -125,5 +124,13 @@
                 }
             }
         }
+    }
+}
+
+
+/* APP WEB KARDIAEVA - VER DOCUMENTOS */
+@media (min-width: 375px) {
+    .document-card__info {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
