@@ -1,4 +1,3 @@
-u
 ![KardiAeva Screenshot](/assets_readme/demo.png)
 
 
@@ -22,7 +21,7 @@ El diseño web se creó a partir de un maquetado hecho en Figma que puedes ver a
 ![KardiAevaDB Screenshot](/assets_readme/KardiAeva-modelo_conceptual.png)
 Modelo conceptual.
 
-![KardiAevaDB Screenshot](/assets_readme/KardiAeva_modelo_logico.png)
+![KardiAevaDB Screenshot](/assets_readme/KardiAeva-modelo_logico.png)
 Modelo logico.
 
 ![KardiAevaDB Screenshot](/assets_readme/KardiAeva_modelo_EntidadRelacion.png)
