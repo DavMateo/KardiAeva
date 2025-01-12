@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from backend.config.db import cargar_credenciales
 from backend.routes.db_keys import config as configuracion_db
+from backend.routes.usuario import user
 from backend.middleware.db_check import DBConnectionMiddleware
 
 
@@ -39,3 +40,4 @@ async def server_index():
 
 # Incluyendo las respectivas rutas del servidor
 app.include_router(configuracion_db, prefix="/api/config")
+app.include_router(user, prefix="/api/usuario")

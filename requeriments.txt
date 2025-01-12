@@ -8,11 +8,9 @@ transformers
 datasets
 scikit-learn
 numpy
-tqdm
 wandb
 evaluate
 scipy
 accelerate>=0.26.0
-trl
-peft
 pandas
+python-dotenv

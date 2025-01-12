@@ -1,7 +1,7 @@
 from enum import Enum
 from sqlalchemy import Table, Column, Enum as SQLAlchemyEnum, ForeignKey
 from sqlalchemy.sql.sqltypes import Integer, SmallInteger, Float, Date
-from config.db import meta, engine
+from backend.config.db import meta, engine
 
 
 # Creando el ENUM de la columna genero
@@ -13,7 +13,7 @@ class GeneroUser(str, Enum):
 # Creando la tabla "usuario" en MySQL
 usuario = Table("usuario", meta,
     Column("id", Integer, primary_key=True, autoincrement=True, unique=True),
-    Column("edad", SmallInteger(3), nullable=False),
+    Column("edad", SmallInteger, nullable=False),
     Column("genero", SQLAlchemyEnum(GeneroUser), nullable=False),
     Column("peso", Float, nullable=False),
     Column("estatura", Float, nullable=False),

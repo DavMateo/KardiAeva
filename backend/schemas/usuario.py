@@ -1,11 +1,11 @@
 from typing import Optional
 from pydantic import BaseModel, datetime_parse
-from models.usuario import GeneroUser
-from schemas.log_ia import Log_ia
-from schemas.nombre_completo import Nombre_completo
-from schemas.enfermedad import Enfermedad
-from schemas.medicamentos import Medicamento
-from schemas.lugar_residencia import Lugar_residencia
+from backend.models.usuario import GeneroUser
+from backend.schemas.log_ia import Log_ia
+from backend.schemas.nombre_completo import Nombre_completo
+from backend.schemas.enfermedad import Enfermedad
+from backend.schemas.medicamentos import Medicamento
+from backend.schemas.lugar_residencia import Lugar_residencia
 
 class Usuario(BaseModel):
     id: Optional[int] = None
